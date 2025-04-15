@@ -25,7 +25,7 @@ public class ChatMessageController {
     }
 
     @GetMapping("/{friendId}")
-    public List<ChatMessage> getMessages(@PathVariable String friendId, Principal principal) {
+    public List<ChatMessage> sages(@PathVariable String friendId, Principal principal) {
         if (principal == null) {
             throw new RuntimeException("Principal is null");
         }

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+    <Properties>
+        <Property name="LOG_DIR">logs</Property>
+    </Properties>
+
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%style{%d{HH:mm:ss.SSS}}{black} %highlight{%-5level} [%style{%t}{green}] %style{%c{1.}}{cyan} - %msg%n%throwable"/>
+        </Console>
+
+        <RollingFile name="FileAppender"
+                     fileName="${LOG_DIR}/application.log"
+                     filePattern="${LOG_DIR}/app-%d{yyyy-MM-dd}-%i.log.gz">
+            <PatternLayout>
+                <Pattern>%d{yyyy-MM-dd HH:mm:ss} %-5level [%t] %c{1} - %msg%n</Pattern>
+            </PatternLayout>
+            <Policies>
+                <SizeBasedTriggeringPolicy size="10MB"/>
+                <TimeBasedTriggeringPolicy />
+            </Policies>
+        </RollingFile>
+    </Appenders>
+
+    <Loggers>
+        <!-- Логи от Spring Boot -->
+        <Root level="info">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="FileAppender"/>
+        </Root>
+
+        <!-- Настраиваем логгинг своего пакета (можно под свой) -->
+        <Logger name="org.example" level="debug" additivity="false">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="FileAppender"/>
+        </Logger>
+    </Loggers>
+</Configuration>

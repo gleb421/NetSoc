@@ -3,3 +3,6 @@ include 'app'
 include 'app:dao'
 include 'app:service'
 include 'app:controller'
+include 'app:kafka-messaging'
+findProject(':app:kafka-messaging')?.name = 'kafka-messaging'
+

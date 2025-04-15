@@ -4,6 +4,7 @@ import org.example.domain.ChatMessage;
 import org.example.domain.User;
 import org.example.repositories.ChatMessageRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -29,7 +30,8 @@ public class ChatMessageService {
         return chatMessageRepository.save(message);
     }
 
-    public List<ChatMessage> getMessagesBetweenUsers(Long userId1, Long userId2) {
-        return chatMessageRepository.findConversation(userId1, userId2);
+//    @Cacheable(value = "chatHistory", key = "T(java.util.Arrays).asList(#id1, #id2).toString()")
+    public List<ChatMessage> getMessagesBetweenUsers(Long id1, Long id2) {
+        return chatMessageRepository.findConversation(id1, id2);
     }
 }

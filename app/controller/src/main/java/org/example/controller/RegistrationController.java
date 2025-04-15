@@ -33,7 +33,7 @@ public class RegistrationController {
             return "registration";
         }
         user.setActive(true);
-//        user.setRoles(Collections.singleton(Role.USER));
+        user.setRoles(Collections.singleton(Role.USER));
         System.out.println("Пользователь: " + user.getUsername() + ", пароль: " + user.getPassword());
         userService.saveUser(user);
         return "redirect:/login";

@@ -1,7 +1,10 @@
 package org.example.controller;
 
 import jakarta.validation.Valid;
+
 import java.security.Principal;
+
+import org.example.KafkaProducerService;
 import org.example.UserService;
 import org.example.ChatMessageService;
 import org.example.domain.ChatMessage;
@@ -13,6 +16,8 @@ import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.handler.annotation.Payload;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class ChatController {
@@ -20,43 +25,39 @@ public class ChatController {
     private final SimpMessagingTemplate messagingTemplate;
     private final ChatMessageService messageService;
     private final UserService userService;
-
+    private KafkaProducerService kafkaProducer;
     public ChatController(@Autowired SimpMessagingTemplate messagingTemplate,
                           @Autowired ChatMessageService messageService,
-                          @Autowired UserService userService) {
+                          @Autowired UserService userService,
+                          @Autowired KafkaProducerService kafkaProducer) {
         this.messagingTemplate = messagingTemplate;
         this.messageService = messageService;
         this.userService = userService;
+        this.kafkaProducer = kafkaProducer;
     }
-
+    @GetMapping("/test-kafka")
+    @ResponseBody
+    public String testKafka() {
+        kafkaProducer.sendMessage("Привет от netSoc!");
+        return "Сообщение отправлено!";
+    }
     @MessageMapping("/chat")
-    public void processMessage(@Payload @Valid MessageRequestDto messageDto, Principal principal) {
-        // Определяем отправителя из Principal (надежнее, чем из данных клиента)
-        String senderUsername = principal.getName();
-        User sender = userService.findByUsername(senderUsername)
+    public void processMessage(ChatMessage message) {
+        User sender = userService.findById(message.getSender().getId())
                 .orElseThrow(() -> new RuntimeException("Sender not found"));
-
-        // Находим получателя по ID из DTO
-        User recipient = userService.findById(messageDto.getRecipientId())
+        User recipient = userService.findById(message.getRecipient().getId())
                 .orElseThrow(() -> new RuntimeException("Recipient not found"));
 
-        // Создаем и сохраняем сообщение (ChatMessage – сущность JPA)
-        ChatMessage message = new ChatMessage();
-        message.setSender(sender);
-        message.setRecipient(recipient);
-        message.setContent(messageDto.getContent());
-        message.setTimestamp(java.time.LocalDateTime.now());
         ChatMessage savedMessage = messageService.saveMessage(sender, recipient, message.getContent());
 
-        // Готовим DTO ответа для клиента
-        MessageResponseDto response = new MessageResponseDto();
-        response.setId(savedMessage.getId());
-        response.setSenderId(sender.getId());
-        response.setSenderUsername(sender.getUsername());
-        response.setContent(savedMessage.getContent());
-        response.setTimestamp(savedMessage.getTimestamp());
+        // Отправить получателю
+        messagingTemplate.convertAndSendToUser(
+                String.valueOf(recipient.getId()),
+                "/queue/messages",
+                savedMessage
+        );
+        kafkaProducer.sendMessage(message.getSender().getUsername() + ": " + message.getContent());
+        System.out.println("Отправка WebSocket сообщения sender=" + sender.getUsername() + " -> recipient=" + recipient.getUsername());
 
-        // Отправляем сообщение получателю по его user‑очереди (Spring добавит префикс /user автоматически)
-        messagingTemplate.convertAndSendToUser(recipient.getUsername(), "/queue/messages", response);
     }
 }

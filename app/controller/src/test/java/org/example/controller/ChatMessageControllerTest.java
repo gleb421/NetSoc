@@ -10,7 +10,7 @@
 //import org.springframework.test.web.servlet.MockMvc;
 //import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 //
-//import java.util.Collections;cddcas
+//import java.util.Collections;
 //import java.util.Optional;
 //
 //import static org.mockito.ArgumentMatchers.any;
@@ -30,11 +30,11 @@
 //
 //    @Test
 //    @WithMockUser(username = "user")
-//    public void testGetMessages() throws Exception {
+//    public void testsages() throws Exception {
 //        User user = new User();
 //        user.setId(1L);
 //        when(userService.findByUsername(any())).thenReturn(Optional.of(user));
-//        when(messageService.getMessagesBetweenUsers(anyLong(), anyLong())).thenReturn(Collections.emptyList());
+//        when(messageService.sgetMessagesBetweenUsers(anyLong(), anyLong())).thenReturn(Collections.emptyList());
 //
 //        mockMvc.perform(get("/api/messages/2"))
 //                .andExpect(status().isOk());

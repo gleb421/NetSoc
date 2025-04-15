@@ -12,6 +12,7 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/app/controller" />
             <option value="$PROJECT_DIR$/app/dao" />
+            <option value="$PROJECT_DIR$/app/kafka-messaging" />
             <option value="$PROJECT_DIR$/app/service" />
           </set>
         </option>

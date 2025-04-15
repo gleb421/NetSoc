@@ -19,7 +19,7 @@
 //    private final SimpMessagingTemplate messagingTemplate = Mockito.mock(SimpMessagingTemplate.class);
 //    private final ChatMessageService chatMessageService = Mockito.mock(ChatMessageService.class);
 //    private final UserService userService = Mockito.mock(UserService.class);
-//    private final WebSocketChatController controller = new WebSocketChatController(messagingTemplate, chatMessageService, userService);
+//    private final W controller = new WebSocketChatController(messagingTemplate, chatMessageService, userService);
 //
 //    @Test
 //    public void testProcessMessage() {

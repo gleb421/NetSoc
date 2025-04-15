@@ -1,0 +1,2006 @@
+2025-04-15 18:35:37 INFO  [background-preinit] Version: HV000001: Hibernate Validator 8.0.1.Final
+2025-04-15 18:35:37 INFO  [main] NetSoc: Starting NetSoc using Java 21.0.6 with PID 15380 (C:\Users\IdeaProjects\netSoc\app\build\classes\java\main started by Глеб in C:\Users\IdeaProjects\netSoc)
+2025-04-15 18:35:37 DEBUG [main] NetSoc: Running with Spring Boot v3.1.3, Spring v6.0.11
+2025-04-15 18:35:37 INFO  [main] NetSoc: No active profile set, falling back to 1 default profile: "default"
+2025-04-15 18:35:38 INFO  [main] Http11NioProtocol: Initializing ProtocolHandler ["http-nio-8080"]
+2025-04-15 18:35:38 INFO  [main] StandardService: Starting service [Tomcat]
+2025-04-15 18:35:38 INFO  [main] StandardEngine: Starting Servlet engine: [Apache Tomcat/10.1.12]
+2025-04-15 18:35:38 INFO  [main] [/]: Initializing Spring embedded WebApplicationContext
+2025-04-15 18:35:39 INFO  [main] VersionPrinter: Flyway Community Edition 9.16.3 by Redgate
+2025-04-15 18:35:39 INFO  [main] VersionPrinter: See release notes here: https://rd.gt/416ObMi
+2025-04-15 18:35:39 INFO  [main] VersionPrinter: 
+2025-04-15 18:35:39 INFO  [main] HikariDataSource: HikariPool-1 - Starting...
+2025-04-15 18:35:40 ERROR [main] HikariPool: HikariPool-1 - Exception during pool initialization.
+org.postgresql.util.PSQLException: Подсоединение по адресу localhost:5432 отклонено. Проверьте что хост и порт указаны правильно и что postmaster принимает TCP/IP-подсоединения.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:342)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:263)
+	at org.postgresql.Driver.makeConnection(Driver.java:443)
+	at org.postgresql.Driver.connect(Driver.java:297)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.flywaydb.core.internal.jdbc.JdbcUtils.openConnection(JdbcUtils.java:48)
+	at org.flywaydb.core.internal.jdbc.JdbcConnectionFactory.<init>(JdbcConnectionFactory.java:74)
+	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:140)
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:140)
+	at org.springframework.boot.autoconfigure.flyway.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:66)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1817)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:313)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1155)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:932)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:608)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:436)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at org.example.NetSoc.main(NetSoc.java:10)
+Caused by: java.net.ConnectException: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:751)
+	at org.postgresql.core.PGStream.createSocket(PGStream.java:243)
+	at org.postgresql.core.PGStream.<init>(PGStream.java:98)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:132)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:258)
+	... 36 more
+2025-04-15 18:35:40 WARN  [main] AnnotationConfigServletWebServerApplicationContext: Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Unable to obtain connection from database: Подсоединение по адресу localhost:5432 отклонено. Проверьте что хост и порт указаны правильно и что postmaster принимает TCP/IP-подсоединения.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+SQL State  : 08001
+Error Code : 0
+Message    : Подсоединение по адресу localhost:5432 отклонено. Проверьте что хост и порт указаны правильно и что postmaster принимает TCP/IP-подсоединения.
+
+2025-04-15 18:35:40 INFO  [main] StandardService: Stopping service [Tomcat]
+2025-04-15 18:35:40 ERROR [main] SpringApplication: Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Unable to obtain connection from database: Подсоединение по адресу localhost:5432 отклонено. Проверьте что хост и порт указаны правильно и что postmaster принимает TCP/IP-подсоединения.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+SQL State  : 08001
+Error Code : 0
+Message    : Подсоединение по адресу localhost:5432 отклонено. Проверьте что хост и порт указаны правильно и что postmaster принимает TCP/IP-подсоединения.
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1770)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:313)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1155)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:932)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:608)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:436)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at org.example.NetSoc.main(NetSoc.java:10)
+Caused by: org.flywaydb.core.internal.exception.FlywaySqlException: Unable to obtain connection from database: Подсоединение по адресу localhost:5432 отклонено. Проверьте что хост и порт указаны правильно и что postmaster принимает TCP/IP-подсоединения.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+SQL State  : 08001
+Error Code : 0
+Message    : Подсоединение по адресу localhost:5432 отклонено. Проверьте что хост и порт указаны правильно и что postmaster принимает TCP/IP-подсоединения.
+
+	at org.flywaydb.core.internal.jdbc.JdbcUtils.openConnection(JdbcUtils.java:60)
+	at org.flywaydb.core.internal.jdbc.JdbcConnectionFactory.<init>(JdbcConnectionFactory.java:74)
+	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:140)
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:140)
+	at org.springframework.boot.autoconfigure.flyway.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:66)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1817)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766)
+	... 18 more
+Caused by: org.postgresql.util.PSQLException: Подсоединение по адресу localhost:5432 отклонено. Проверьте что хост и порт указаны правильно и что postmaster принимает TCP/IP-подсоединения.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:342)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:263)
+	at org.postgresql.Driver.makeConnection(Driver.java:443)
+	at org.postgresql.Driver.connect(Driver.java:297)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.flywaydb.core.internal.jdbc.JdbcUtils.openConnection(JdbcUtils.java:48)
+	... 24 more
+Caused by: java.net.ConnectException: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:751)
+	at org.postgresql.core.PGStream.createSocket(PGStream.java:243)
+	at org.postgresql.core.PGStream.<init>(PGStream.java:98)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:132)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:258)
+	... 36 more
+2025-04-15 18:46:18 INFO  [background-preinit] Version - HV000001: Hibernate Validator 8.0.1.Final
+2025-04-15 18:46:18 INFO  [main] NetSoc - Starting NetSoc using Java 21.0.6 with PID 6448 (C:\Users\IdeaProjects\netSoc\app\build\classes\java\main started by Глеб in C:\Users\IdeaProjects\netSoc)
+2025-04-15 18:46:18 DEBUG [main] NetSoc - Running with Spring Boot v3.1.3, Spring v6.0.11
+2025-04-15 18:46:18 INFO  [main] NetSoc - No active profile set, falling back to 1 default profile: "default"
+2025-04-15 18:46:19 INFO  [main] RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-04-15 18:46:19 INFO  [main] RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-15 18:46:20 INFO  [main] RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 192 ms. Found 2 JPA repository interfaces.
+2025-04-15 18:46:20 INFO  [main] RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-04-15 18:46:20 INFO  [main] RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-04-15 18:46:20 INFO  [main] RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface org.example.repositories.ChatMessageRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-04-15 18:46:20 INFO  [main] RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface org.example.repositories.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-04-15 18:46:20 INFO  [main] RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
+2025-04-15 18:46:20 INFO  [main] TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-04-15 18:46:20 INFO  [main] Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-04-15 18:46:20 INFO  [main] StandardService - Starting service [Tomcat]
+2025-04-15 18:46:20 INFO  [main] StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.12]
+2025-04-15 18:46:20 INFO  [main] [/] - Initializing Spring embedded WebApplicationContext
+2025-04-15 18:46:20 INFO  [main] ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2009 ms
+2025-04-15 18:46:21 INFO  [main] VersionPrinter - Flyway Community Edition 9.16.3 by Redgate
+2025-04-15 18:46:21 INFO  [main] VersionPrinter - See release notes here: https://rd.gt/416ObMi
+2025-04-15 18:46:21 INFO  [main] VersionPrinter - 
+2025-04-15 18:46:21 INFO  [main] HikariDataSource - HikariPool-1 - Starting...
+2025-04-15 18:46:22 ERROR [main] HikariPool - HikariPool-1 - Exception during pool initialization.
+org.postgresql.util.PSQLException: �����: ������������ "postgres" �� ������ �������� ����������� (�� ������)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.doAuthentication(ConnectionFactoryImpl.java:693) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:203) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:258) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:263) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.Driver.makeConnection(Driver.java:443) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.Driver.connect(Driver.java:297) ~[postgresql-42.6.0.jar:42.6.0]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138) ~[HikariCP-5.0.1.jar:?]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359) ~[HikariCP-5.0.1.jar:?]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201) ~[HikariCP-5.0.1.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470) ~[HikariCP-5.0.1.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561) ~[HikariCP-5.0.1.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100) ~[HikariCP-5.0.1.jar:?]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) ~[HikariCP-5.0.1.jar:?]
+	at org.flywaydb.core.internal.jdbc.JdbcUtils.openConnection(JdbcUtils.java:48) ~[flyway-core-9.16.3.jar:?]
+	at org.flywaydb.core.internal.jdbc.JdbcConnectionFactory.<init>(JdbcConnectionFactory.java:74) ~[flyway-core-9.16.3.jar:?]
+	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:140) ~[flyway-core-9.16.3.jar:?]
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:140) ~[flyway-core-9.16.3.jar:?]
+	at org.springframework.boot.autoconfigure.flyway.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:66) ~[spring-boot-autoconfigure-3.1.3.jar:3.1.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1817) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) [spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) [spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) [spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:313) [spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) [spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1155) [spring-context-6.0.11.jar:6.0.11]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:932) [spring-context-6.0.11.jar:6.0.11]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:608) [spring-context-6.0.11.jar:6.0.11]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) [spring-boot-3.1.3.jar:3.1.3]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) [spring-boot-3.1.3.jar:3.1.3]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:436) [spring-boot-3.1.3.jar:3.1.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312) [spring-boot-3.1.3.jar:3.1.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) [spring-boot-3.1.3.jar:3.1.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) [spring-boot-3.1.3.jar:3.1.3]
+	at org.example.NetSoc.main(NetSoc.java:10) [main/:?]
+2025-04-15 18:46:22 WARN  [main] AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Unable to obtain connection from database: �����: ������������ "postgres" �� ������ �������� ����������� (�� ������)
+--------------------------------------------------------------------------------------------------------------------
+SQL State  : 28P01
+Error Code : 0
+Message    : �����: ������������ "postgres" �� ������ �������� ����������� (�� ������)
+
+2025-04-15 18:46:22 INFO  [main] StandardService - Stopping service [Tomcat]
+2025-04-15 18:46:22 INFO  [main] ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-04-15 18:46:22 ERROR [main] SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Unable to obtain connection from database: �����: ������������ "postgres" �� ������ �������� ����������� (�� ������)
+--------------------------------------------------------------------------------------------------------------------
+SQL State  : 28P01
+Error Code : 0
+Message    : �����: ������������ "postgres" �� ������ �������� ����������� (�� ������)
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1770) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:313) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1155) ~[spring-context-6.0.11.jar:6.0.11]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:932) ~[spring-context-6.0.11.jar:6.0.11]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:608) ~[spring-context-6.0.11.jar:6.0.11]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.1.3.jar:3.1.3]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) [spring-boot-3.1.3.jar:3.1.3]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:436) [spring-boot-3.1.3.jar:3.1.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312) [spring-boot-3.1.3.jar:3.1.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) [spring-boot-3.1.3.jar:3.1.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) [spring-boot-3.1.3.jar:3.1.3]
+	at org.example.NetSoc.main(NetSoc.java:10) [main/:?]
+Caused by: org.flywaydb.core.internal.exception.FlywaySqlException: Unable to obtain connection from database: �����: ������������ "postgres" �� ������ �������� ����������� (�� ������)
+--------------------------------------------------------------------------------------------------------------------
+SQL State  : 28P01
+Error Code : 0
+Message    : �����: ������������ "postgres" �� ������ �������� ����������� (�� ������)
+
+	at org.flywaydb.core.internal.jdbc.JdbcUtils.openConnection(JdbcUtils.java:60) ~[flyway-core-9.16.3.jar:?]
+	at org.flywaydb.core.internal.jdbc.JdbcConnectionFactory.<init>(JdbcConnectionFactory.java:74) ~[flyway-core-9.16.3.jar:?]
+	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:140) ~[flyway-core-9.16.3.jar:?]
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:140) ~[flyway-core-9.16.3.jar:?]
+	at org.springframework.boot.autoconfigure.flyway.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:66) ~[spring-boot-autoconfigure-3.1.3.jar:3.1.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1817) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766) ~[spring-beans-6.0.11.jar:6.0.11]
+	... 18 more
+Caused by: org.postgresql.util.PSQLException: �����: ������������ "postgres" �� ������ �������� ����������� (�� ������)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.doAuthentication(ConnectionFactoryImpl.java:693) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:203) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:258) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:263) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.Driver.makeConnection(Driver.java:443) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.Driver.connect(Driver.java:297) ~[postgresql-42.6.0.jar:42.6.0]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138) ~[HikariCP-5.0.1.jar:?]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359) ~[HikariCP-5.0.1.jar:?]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201) ~[HikariCP-5.0.1.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470) ~[HikariCP-5.0.1.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561) ~[HikariCP-5.0.1.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100) ~[HikariCP-5.0.1.jar:?]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) ~[HikariCP-5.0.1.jar:?]
+	at org.flywaydb.core.internal.jdbc.JdbcUtils.openConnection(JdbcUtils.java:48) ~[flyway-core-9.16.3.jar:?]
+	at org.flywaydb.core.internal.jdbc.JdbcConnectionFactory.<init>(JdbcConnectionFactory.java:74) ~[flyway-core-9.16.3.jar:?]
+	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:140) ~[flyway-core-9.16.3.jar:?]
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:140) ~[flyway-core-9.16.3.jar:?]
+	at org.springframework.boot.autoconfigure.flyway.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:66) ~[spring-boot-autoconfigure-3.1.3.jar:3.1.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1817) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766) ~[spring-beans-6.0.11.jar:6.0.11]
+	... 18 more
+2025-04-15 18:50:15 INFO  [background-preinit] Version - HV000001: Hibernate Validator 8.0.1.Final
+2025-04-15 18:50:15 INFO  [main] NetSoc - Starting NetSoc using Java 21.0.6 with PID 9788 (C:\Users\IdeaProjects\netSoc\app\build\classes\java\main started by Глеб in C:\Users\IdeaProjects\netSoc)
+2025-04-15 18:50:15 DEBUG [main] NetSoc - Running with Spring Boot v3.1.3, Spring v6.0.11
+2025-04-15 18:50:15 INFO  [main] NetSoc - No active profile set, falling back to 1 default profile: "default"
+2025-04-15 18:50:16 INFO  [main] RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-04-15 18:50:16 INFO  [main] RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-15 18:50:16 INFO  [main] RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 196 ms. Found 2 JPA repository interfaces.
+2025-04-15 18:50:16 INFO  [main] RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-04-15 18:50:16 INFO  [main] RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-04-15 18:50:16 INFO  [main] RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface org.example.repositories.ChatMessageRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-04-15 18:50:16 INFO  [main] RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface org.example.repositories.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-04-15 18:50:16 INFO  [main] RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
+2025-04-15 18:50:17 INFO  [main] TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-04-15 18:50:17 INFO  [main] Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-04-15 18:50:17 INFO  [main] StandardService - Starting service [Tomcat]
+2025-04-15 18:50:17 INFO  [main] StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.12]
+2025-04-15 18:50:17 INFO  [main] [/] - Initializing Spring embedded WebApplicationContext
+2025-04-15 18:50:17 INFO  [main] ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2038 ms
+2025-04-15 18:50:18 INFO  [main] VersionPrinter - Flyway Community Edition 9.16.3 by Redgate
+2025-04-15 18:50:18 INFO  [main] VersionPrinter - See release notes here: https://rd.gt/416ObMi
+2025-04-15 18:50:18 INFO  [main] VersionPrinter - 
+2025-04-15 18:50:18 INFO  [main] HikariDataSource - HikariPool-1 - Starting...
+2025-04-15 18:50:19 ERROR [main] HikariPool - HikariPool-1 - Exception during pool initialization.
+org.postgresql.util.PSQLException: �����: ������������ "postgres" �� ������ �������� ����������� (�� ������)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.doAuthentication(ConnectionFactoryImpl.java:693) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:203) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:258) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:263) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.Driver.makeConnection(Driver.java:443) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.Driver.connect(Driver.java:297) ~[postgresql-42.6.0.jar:42.6.0]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138) ~[HikariCP-5.0.1.jar:?]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359) ~[HikariCP-5.0.1.jar:?]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201) ~[HikariCP-5.0.1.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470) ~[HikariCP-5.0.1.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561) ~[HikariCP-5.0.1.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100) ~[HikariCP-5.0.1.jar:?]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) ~[HikariCP-5.0.1.jar:?]
+	at org.flywaydb.core.internal.jdbc.JdbcUtils.openConnection(JdbcUtils.java:48) ~[flyway-core-9.16.3.jar:?]
+	at org.flywaydb.core.internal.jdbc.JdbcConnectionFactory.<init>(JdbcConnectionFactory.java:74) ~[flyway-core-9.16.3.jar:?]
+	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:140) ~[flyway-core-9.16.3.jar:?]
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:140) ~[flyway-core-9.16.3.jar:?]
+	at org.springframework.boot.autoconfigure.flyway.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:66) ~[spring-boot-autoconfigure-3.1.3.jar:3.1.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1817) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) [spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) [spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) [spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:313) [spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) [spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1155) [spring-context-6.0.11.jar:6.0.11]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:932) [spring-context-6.0.11.jar:6.0.11]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:608) [spring-context-6.0.11.jar:6.0.11]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) [spring-boot-3.1.3.jar:3.1.3]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) [spring-boot-3.1.3.jar:3.1.3]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:436) [spring-boot-3.1.3.jar:3.1.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312) [spring-boot-3.1.3.jar:3.1.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) [spring-boot-3.1.3.jar:3.1.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) [spring-boot-3.1.3.jar:3.1.3]
+	at org.example.NetSoc.main(NetSoc.java:10) [main/:?]
+2025-04-15 18:50:19 WARN  [main] AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Unable to obtain connection from database: �����: ������������ "postgres" �� ������ �������� ����������� (�� ������)
+--------------------------------------------------------------------------------------------------------------------
+SQL State  : 28P01
+Error Code : 0
+Message    : �����: ������������ "postgres" �� ������ �������� ����������� (�� ������)
+
+2025-04-15 18:50:19 INFO  [main] StandardService - Stopping service [Tomcat]
+2025-04-15 18:50:19 INFO  [main] ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-04-15 18:50:19 ERROR [main] SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Unable to obtain connection from database: �����: ������������ "postgres" �� ������ �������� ����������� (�� ������)
+--------------------------------------------------------------------------------------------------------------------
+SQL State  : 28P01
+Error Code : 0
+Message    : �����: ������������ "postgres" �� ������ �������� ����������� (�� ������)
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1770) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:313) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1155) ~[spring-context-6.0.11.jar:6.0.11]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:932) ~[spring-context-6.0.11.jar:6.0.11]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:608) ~[spring-context-6.0.11.jar:6.0.11]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.1.3.jar:3.1.3]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) [spring-boot-3.1.3.jar:3.1.3]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:436) [spring-boot-3.1.3.jar:3.1.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312) [spring-boot-3.1.3.jar:3.1.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) [spring-boot-3.1.3.jar:3.1.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) [spring-boot-3.1.3.jar:3.1.3]
+	at org.example.NetSoc.main(NetSoc.java:10) [main/:?]
+Caused by: org.flywaydb.core.internal.exception.FlywaySqlException: Unable to obtain connection from database: �����: ������������ "postgres" �� ������ �������� ����������� (�� ������)
+--------------------------------------------------------------------------------------------------------------------
+SQL State  : 28P01
+Error Code : 0
+Message    : �����: ������������ "postgres" �� ������ �������� ����������� (�� ������)
+
+	at org.flywaydb.core.internal.jdbc.JdbcUtils.openConnection(JdbcUtils.java:60) ~[flyway-core-9.16.3.jar:?]
+	at org.flywaydb.core.internal.jdbc.JdbcConnectionFactory.<init>(JdbcConnectionFactory.java:74) ~[flyway-core-9.16.3.jar:?]
+	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:140) ~[flyway-core-9.16.3.jar:?]
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:140) ~[flyway-core-9.16.3.jar:?]
+	at org.springframework.boot.autoconfigure.flyway.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:66) ~[spring-boot-autoconfigure-3.1.3.jar:3.1.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1817) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766) ~[spring-beans-6.0.11.jar:6.0.11]
+	... 18 more
+Caused by: org.postgresql.util.PSQLException: �����: ������������ "postgres" �� ������ �������� ����������� (�� ������)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.doAuthentication(ConnectionFactoryImpl.java:693) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:203) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:258) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:263) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.Driver.makeConnection(Driver.java:443) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.Driver.connect(Driver.java:297) ~[postgresql-42.6.0.jar:42.6.0]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138) ~[HikariCP-5.0.1.jar:?]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359) ~[HikariCP-5.0.1.jar:?]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201) ~[HikariCP-5.0.1.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470) ~[HikariCP-5.0.1.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561) ~[HikariCP-5.0.1.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100) ~[HikariCP-5.0.1.jar:?]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) ~[HikariCP-5.0.1.jar:?]
+	at org.flywaydb.core.internal.jdbc.JdbcUtils.openConnection(JdbcUtils.java:48) ~[flyway-core-9.16.3.jar:?]
+	at org.flywaydb.core.internal.jdbc.JdbcConnectionFactory.<init>(JdbcConnectionFactory.java:74) ~[flyway-core-9.16.3.jar:?]
+	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:140) ~[flyway-core-9.16.3.jar:?]
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:140) ~[flyway-core-9.16.3.jar:?]
+	at org.springframework.boot.autoconfigure.flyway.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:66) ~[spring-boot-autoconfigure-3.1.3.jar:3.1.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1817) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766) ~[spring-beans-6.0.11.jar:6.0.11]
+	... 18 more
+2025-04-15 18:50:38 INFO  [background-preinit] Version - HV000001: Hibernate Validator 8.0.1.Final
+2025-04-15 18:50:38 INFO  [main] NetSoc - Starting NetSoc using Java 21.0.6 with PID 19568 (C:\Users\IdeaProjects\netSoc\app\build\classes\java\main started by Глеб in C:\Users\IdeaProjects\netSoc)
+2025-04-15 18:50:38 DEBUG [main] NetSoc - Running with Spring Boot v3.1.3, Spring v6.0.11
+2025-04-15 18:50:38 INFO  [main] NetSoc - No active profile set, falling back to 1 default profile: "default"
+2025-04-15 18:50:39 INFO  [main] RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-04-15 18:50:39 INFO  [main] RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-15 18:50:39 INFO  [main] RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 175 ms. Found 2 JPA repository interfaces.
+2025-04-15 18:50:39 INFO  [main] RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-04-15 18:50:39 INFO  [main] RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-04-15 18:50:39 INFO  [main] RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface org.example.repositories.ChatMessageRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-04-15 18:50:39 INFO  [main] RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface org.example.repositories.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-04-15 18:50:39 INFO  [main] RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 12 ms. Found 0 Redis repository interfaces.
+2025-04-15 18:50:40 INFO  [main] TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-04-15 18:50:40 INFO  [main] Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-04-15 18:50:40 INFO  [main] StandardService - Starting service [Tomcat]
+2025-04-15 18:50:40 INFO  [main] StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.12]
+2025-04-15 18:50:40 INFO  [main] [/] - Initializing Spring embedded WebApplicationContext
+2025-04-15 18:50:40 INFO  [main] ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1738 ms
+2025-04-15 18:50:40 INFO  [main] VersionPrinter - Flyway Community Edition 9.16.3 by Redgate
+2025-04-15 18:50:40 INFO  [main] VersionPrinter - See release notes here: https://rd.gt/416ObMi
+2025-04-15 18:50:40 INFO  [main] VersionPrinter - 
+2025-04-15 18:50:40 INFO  [main] HikariDataSource - HikariPool-1 - Starting...
+2025-04-15 18:50:42 ERROR [main] HikariPool - HikariPool-1 - Exception during pool initialization.
+org.postgresql.util.PSQLException: �����: ������������ "postgres" �� ������ �������� ����������� (�� ������)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.doAuthentication(ConnectionFactoryImpl.java:693) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:203) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:258) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:263) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.Driver.makeConnection(Driver.java:443) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.Driver.connect(Driver.java:297) ~[postgresql-42.6.0.jar:42.6.0]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138) ~[HikariCP-5.0.1.jar:?]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359) ~[HikariCP-5.0.1.jar:?]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201) ~[HikariCP-5.0.1.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470) ~[HikariCP-5.0.1.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561) ~[HikariCP-5.0.1.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100) ~[HikariCP-5.0.1.jar:?]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) ~[HikariCP-5.0.1.jar:?]
+	at org.flywaydb.core.internal.jdbc.JdbcUtils.openConnection(JdbcUtils.java:48) ~[flyway-core-9.16.3.jar:?]
+	at org.flywaydb.core.internal.jdbc.JdbcConnectionFactory.<init>(JdbcConnectionFactory.java:74) ~[flyway-core-9.16.3.jar:?]
+	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:140) ~[flyway-core-9.16.3.jar:?]
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:140) ~[flyway-core-9.16.3.jar:?]
+	at org.springframework.boot.autoconfigure.flyway.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:66) ~[spring-boot-autoconfigure-3.1.3.jar:3.1.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1817) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) [spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) [spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) [spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:313) [spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) [spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1155) [spring-context-6.0.11.jar:6.0.11]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:932) [spring-context-6.0.11.jar:6.0.11]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:608) [spring-context-6.0.11.jar:6.0.11]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) [spring-boot-3.1.3.jar:3.1.3]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) [spring-boot-3.1.3.jar:3.1.3]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:436) [spring-boot-3.1.3.jar:3.1.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312) [spring-boot-3.1.3.jar:3.1.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) [spring-boot-3.1.3.jar:3.1.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) [spring-boot-3.1.3.jar:3.1.3]
+	at org.example.NetSoc.main(NetSoc.java:10) [main/:?]
+2025-04-15 18:50:42 WARN  [main] AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Unable to obtain connection from database: �����: ������������ "postgres" �� ������ �������� ����������� (�� ������)
+--------------------------------------------------------------------------------------------------------------------
+SQL State  : 28P01
+Error Code : 0
+Message    : �����: ������������ "postgres" �� ������ �������� ����������� (�� ������)
+
+2025-04-15 18:50:42 INFO  [main] StandardService - Stopping service [Tomcat]
+2025-04-15 18:50:42 INFO  [main] ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-04-15 18:50:42 ERROR [main] SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Unable to obtain connection from database: �����: ������������ "postgres" �� ������ �������� ����������� (�� ������)
+--------------------------------------------------------------------------------------------------------------------
+SQL State  : 28P01
+Error Code : 0
+Message    : �����: ������������ "postgres" �� ������ �������� ����������� (�� ������)
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1770) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:313) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1155) ~[spring-context-6.0.11.jar:6.0.11]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:932) ~[spring-context-6.0.11.jar:6.0.11]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:608) ~[spring-context-6.0.11.jar:6.0.11]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.1.3.jar:3.1.3]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) [spring-boot-3.1.3.jar:3.1.3]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:436) [spring-boot-3.1.3.jar:3.1.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312) [spring-boot-3.1.3.jar:3.1.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) [spring-boot-3.1.3.jar:3.1.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) [spring-boot-3.1.3.jar:3.1.3]
+	at org.example.NetSoc.main(NetSoc.java:10) [main/:?]
+Caused by: org.flywaydb.core.internal.exception.FlywaySqlException: Unable to obtain connection from database: �����: ������������ "postgres" �� ������ �������� ����������� (�� ������)
+--------------------------------------------------------------------------------------------------------------------
+SQL State  : 28P01
+Error Code : 0
+Message    : �����: ������������ "postgres" �� ������ �������� ����������� (�� ������)
+
+	at org.flywaydb.core.internal.jdbc.JdbcUtils.openConnection(JdbcUtils.java:60) ~[flyway-core-9.16.3.jar:?]
+	at org.flywaydb.core.internal.jdbc.JdbcConnectionFactory.<init>(JdbcConnectionFactory.java:74) ~[flyway-core-9.16.3.jar:?]
+	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:140) ~[flyway-core-9.16.3.jar:?]
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:140) ~[flyway-core-9.16.3.jar:?]
+	at org.springframework.boot.autoconfigure.flyway.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:66) ~[spring-boot-autoconfigure-3.1.3.jar:3.1.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1817) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766) ~[spring-beans-6.0.11.jar:6.0.11]
+	... 18 more
+Caused by: org.postgresql.util.PSQLException: �����: ������������ "postgres" �� ������ �������� ����������� (�� ������)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.doAuthentication(ConnectionFactoryImpl.java:693) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:203) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:258) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:263) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.Driver.makeConnection(Driver.java:443) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.Driver.connect(Driver.java:297) ~[postgresql-42.6.0.jar:42.6.0]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138) ~[HikariCP-5.0.1.jar:?]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359) ~[HikariCP-5.0.1.jar:?]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201) ~[HikariCP-5.0.1.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470) ~[HikariCP-5.0.1.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561) ~[HikariCP-5.0.1.jar:?]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100) ~[HikariCP-5.0.1.jar:?]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) ~[HikariCP-5.0.1.jar:?]
+	at org.flywaydb.core.internal.jdbc.JdbcUtils.openConnection(JdbcUtils.java:48) ~[flyway-core-9.16.3.jar:?]
+	at org.flywaydb.core.internal.jdbc.JdbcConnectionFactory.<init>(JdbcConnectionFactory.java:74) ~[flyway-core-9.16.3.jar:?]
+	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:140) ~[flyway-core-9.16.3.jar:?]
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:140) ~[flyway-core-9.16.3.jar:?]
+	at org.springframework.boot.autoconfigure.flyway.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:66) ~[spring-boot-autoconfigure-3.1.3.jar:3.1.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1817) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766) ~[spring-beans-6.0.11.jar:6.0.11]
+	... 18 more
+2025-04-15 18:51:29 INFO  [background-preinit] Version - HV000001: Hibernate Validator 8.0.1.Final
+2025-04-15 18:51:29 INFO  [main] NetSoc - Starting NetSoc using Java 21.0.6 with PID 11776 (C:\Users\IdeaProjects\netSoc\app\build\classes\java\main started by Глеб in C:\Users\IdeaProjects\netSoc)
+2025-04-15 18:51:29 DEBUG [main] NetSoc - Running with Spring Boot v3.1.3, Spring v6.0.11
+2025-04-15 18:51:29 INFO  [main] NetSoc - No active profile set, falling back to 1 default profile: "default"
+2025-04-15 18:51:30 INFO  [main] RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-04-15 18:51:30 INFO  [main] RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-15 18:51:30 INFO  [main] RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 141 ms. Found 2 JPA repository interfaces.
+2025-04-15 18:51:30 INFO  [main] RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-04-15 18:51:30 INFO  [main] RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-04-15 18:51:30 INFO  [main] RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface org.example.repositories.ChatMessageRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-04-15 18:51:30 INFO  [main] RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface org.example.repositories.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-04-15 18:51:30 INFO  [main] RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
+2025-04-15 18:51:31 INFO  [main] TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-04-15 18:51:31 INFO  [main] Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-04-15 18:51:31 INFO  [main] StandardService - Starting service [Tomcat]
+2025-04-15 18:51:31 INFO  [main] StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.12]
+2025-04-15 18:51:31 INFO  [main] [/] - Initializing Spring embedded WebApplicationContext
+2025-04-15 18:51:31 INFO  [main] ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1647 ms
+2025-04-15 18:51:32 INFO  [main] VersionPrinter - Flyway Community Edition 9.16.3 by Redgate
+2025-04-15 18:51:32 INFO  [main] VersionPrinter - See release notes here: https://rd.gt/416ObMi
+2025-04-15 18:51:32 INFO  [main] VersionPrinter - 
+2025-04-15 18:51:32 INFO  [main] HikariDataSource - HikariPool-1 - Starting...
+2025-04-15 18:51:32 INFO  [main] HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@25f7cc38
+2025-04-15 18:51:32 INFO  [main] HikariDataSource - HikariPool-1 - Start completed.
+2025-04-15 18:51:32 INFO  [main] BaseDatabaseType - Database: jdbc:postgresql://localhost:5432/socialdb (PostgreSQL 17.4)
+2025-04-15 18:51:32 WARN  [main] Database - Flyway upgrade recommended: PostgreSQL 17.4 is newer than this version of Flyway and support has not been tested. The latest supported version of PostgreSQL is 15.
+2025-04-15 18:51:32 INFO  [main] JdbcTableSchemaHistory - Schema history table "public"."flyway_schema_history" does not exist yet
+2025-04-15 18:51:32 INFO  [main] DbValidate - Successfully validated 1 migration (execution time 00:00.028s)
+2025-04-15 18:51:32 INFO  [main] JdbcTableSchemaHistory - Creating Schema History table "public"."flyway_schema_history" ...
+2025-04-15 18:51:32 INFO  [main] DbMigrate - Current version of schema "public": << Empty Schema >>
+2025-04-15 18:51:32 INFO  [main] DbMigrate - Migrating schema "public" to version "1 - init schema"
+2025-04-15 18:51:32 INFO  [main] DbMigrate - Successfully applied 1 migration to schema "public", now at version v1 (execution time 00:00.048s)
+2025-04-15 18:51:32 INFO  [main] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-15 18:51:32 INFO  [main] Version - HHH000412: Hibernate ORM core version 6.2.7.Final
+2025-04-15 18:51:32 INFO  [main] Environment - HHH000406: Using bytecode reflection optimizer
+2025-04-15 18:51:32 INFO  [main] BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2025-04-15 18:51:32 INFO  [main] SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-15 18:51:33 INFO  [main] BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2025-04-15 18:51:34 INFO  [main] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-04-15 18:51:34 INFO  [main] LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-15 18:51:34 INFO  [main] QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-04-15 18:51:35 WARN  [main] JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-15 18:51:35 INFO  [main] DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@11225084, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@51470a6c, org.springframework.security.web.context.SecurityContextHolderFilter@5d225368, org.springframework.security.web.header.HeaderWriterFilter@39b58f7d, org.springframework.security.web.csrf.CsrfFilter@50dfac19, org.springframework.security.web.authentication.logout.LogoutFilter@7b4f1512, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@35dc4303, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4d687300, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2d6d0cf6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6d48f1c, org.springframework.security.web.access.ExceptionTranslationFilter@92f6ae6, org.springframework.security.web.access.intercept.AuthorizationFilter@30865a1]
+2025-04-15 18:51:35 WARN  [main] UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 9e22f6d6-2246-478a-8365-1131ebda5dd5
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-04-15 18:51:36 INFO  [main] AdminClientConfig - AdminClientConfig values: 
+	auto.include.jmx.reporter = true
+	bootstrap.servers = [localhost:9092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2025-04-15 18:51:36 INFO  [main] AppInfoParser - Kafka version: 3.4.1
+2025-04-15 18:51:36 INFO  [main] AppInfoParser - Kafka commitId: 8a516edc2755df89
+2025-04-15 18:51:36 INFO  [main] AppInfoParser - Kafka startTimeMs: 1744732296161
+2025-04-15 18:51:36 INFO  [kafka-admin-client-thread | adminclient-1] AppInfoParser - App info kafka.admin.client for adminclient-1 unregistered
+2025-04-15 18:51:36 INFO  [kafka-admin-client-thread | adminclient-1] Metrics - Metrics scheduler closed
+2025-04-15 18:51:36 INFO  [kafka-admin-client-thread | adminclient-1] Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2025-04-15 18:51:36 INFO  [kafka-admin-client-thread | adminclient-1] Metrics - Metrics reporters closed
+2025-04-15 18:51:36 INFO  [main] Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-04-15 18:51:36 WARN  [main] AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2025-04-15 18:51:36 INFO  [main] LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-15 18:51:36 INFO  [main] HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-04-15 18:51:36 INFO  [main] HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-04-15 18:51:37 INFO  [main] Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+2025-04-15 18:51:37 INFO  [main] StandardService - Stopping service [Tomcat]
+2025-04-15 18:51:37 INFO  [main] Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+2025-04-15 18:51:37 INFO  [main] Http11NioProtocol - Destroying ProtocolHandler ["http-nio-8080"]
+2025-04-15 18:51:37 INFO  [main] ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-04-15 18:51:37 ERROR [main] LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2025-04-15 18:54:04 INFO  [background-preinit] Version - HV000001: Hibernate Validator 8.0.1.Final
+2025-04-15 18:54:04 INFO  [main] NetSoc - Starting NetSoc using Java 21.0.6 with PID 18096 (C:\Users\IdeaProjects\netSoc\app\build\classes\java\main started by Глеб in C:\Users\IdeaProjects\netSoc)
+2025-04-15 18:54:04 DEBUG [main] NetSoc - Running with Spring Boot v3.1.3, Spring v6.0.11
+2025-04-15 18:54:04 INFO  [main] NetSoc - No active profile set, falling back to 1 default profile: "default"
+2025-04-15 18:54:05 INFO  [main] RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-04-15 18:54:05 INFO  [main] RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-15 18:54:05 INFO  [main] RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 152 ms. Found 2 JPA repository interfaces.
+2025-04-15 18:54:05 INFO  [main] RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-04-15 18:54:05 INFO  [main] RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-04-15 18:54:05 INFO  [main] RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface org.example.repositories.ChatMessageRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-04-15 18:54:05 INFO  [main] RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface org.example.repositories.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-04-15 18:54:05 INFO  [main] RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
+2025-04-15 18:54:05 INFO  [main] TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-04-15 18:54:05 INFO  [main] Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-04-15 18:54:05 INFO  [main] StandardService - Starting service [Tomcat]
+2025-04-15 18:54:05 INFO  [main] StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.12]
+2025-04-15 18:54:06 INFO  [main] [/] - Initializing Spring embedded WebApplicationContext
+2025-04-15 18:54:06 INFO  [main] ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1859 ms
+2025-04-15 18:54:06 INFO  [main] VersionPrinter - Flyway Community Edition 9.16.3 by Redgate
+2025-04-15 18:54:06 INFO  [main] VersionPrinter - See release notes here: https://rd.gt/416ObMi
+2025-04-15 18:54:06 INFO  [main] VersionPrinter - 
+2025-04-15 18:54:06 INFO  [main] HikariDataSource - HikariPool-1 - Starting...
+2025-04-15 18:54:06 INFO  [main] HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4ca0b9b1
+2025-04-15 18:54:06 INFO  [main] HikariDataSource - HikariPool-1 - Start completed.
+2025-04-15 18:54:06 INFO  [main] BaseDatabaseType - Database: jdbc:postgresql://localhost:5432/socialdb (PostgreSQL 17.4)
+2025-04-15 18:54:06 WARN  [main] Database - Flyway upgrade recommended: PostgreSQL 17.4 is newer than this version of Flyway and support has not been tested. The latest supported version of PostgreSQL is 15.
+2025-04-15 18:54:06 INFO  [main] DbValidate - Successfully validated 1 migration (execution time 00:00.029s)
+2025-04-15 18:54:06 INFO  [main] DbMigrate - Current version of schema "public": 1
+2025-04-15 18:54:06 INFO  [main] DbMigrate - Schema "public" is up to date. No migration necessary.
+2025-04-15 18:54:06 INFO  [main] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-15 18:54:06 INFO  [main] Version - HHH000412: Hibernate ORM core version 6.2.7.Final
+2025-04-15 18:54:06 INFO  [main] Environment - HHH000406: Using bytecode reflection optimizer
+2025-04-15 18:54:07 INFO  [main] BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2025-04-15 18:54:07 INFO  [main] SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-15 18:54:07 INFO  [main] BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2025-04-15 18:54:08 INFO  [main] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-04-15 18:54:08 INFO  [main] LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-15 18:54:08 INFO  [main] QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-04-15 18:54:09 WARN  [main] JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-15 18:54:09 INFO  [main] DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@426ee667, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1352211d, org.springframework.security.web.context.SecurityContextHolderFilter@43898d09, org.springframework.security.web.header.HeaderWriterFilter@24fc815d, org.springframework.security.web.csrf.CsrfFilter@8a37c6a, org.springframework.security.web.authentication.logout.LogoutFilter@3fc736c4, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@7e8c465d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@87060c0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3201aadd, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@ff03384, org.springframework.security.web.access.ExceptionTranslationFilter@1a0252c, org.springframework.security.web.access.intercept.AuthorizationFilter@393d1a05]
+2025-04-15 18:54:10 WARN  [main] UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: fbdd1b28-aa83-42aa-a161-dffe54290eb9
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-04-15 18:54:10 INFO  [main] AdminClientConfig - AdminClientConfig values: 
+	auto.include.jmx.reporter = true
+	bootstrap.servers = [localhost:9092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2025-04-15 18:54:10 INFO  [main] AppInfoParser - Kafka version: 3.4.1
+2025-04-15 18:54:10 INFO  [main] AppInfoParser - Kafka commitId: 8a516edc2755df89
+2025-04-15 18:54:10 INFO  [main] AppInfoParser - Kafka startTimeMs: 1744732450314
+2025-04-15 18:54:10 INFO  [kafka-admin-client-thread | adminclient-1] AppInfoParser - App info kafka.admin.client for adminclient-1 unregistered
+2025-04-15 18:54:10 INFO  [kafka-admin-client-thread | adminclient-1] Metrics - Metrics scheduler closed
+2025-04-15 18:54:10 INFO  [kafka-admin-client-thread | adminclient-1] Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2025-04-15 18:54:10 INFO  [kafka-admin-client-thread | adminclient-1] Metrics - Metrics reporters closed
+2025-04-15 18:54:10 INFO  [main] Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-04-15 18:54:10 INFO  [main] TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-04-15 18:54:10 INFO  [main] ConsumerConfig - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-netSoc-group-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = netSoc-group
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2025-04-15 18:54:10 INFO  [main] AppInfoParser - Kafka version: 3.4.1
+2025-04-15 18:54:10 INFO  [main] AppInfoParser - Kafka commitId: 8a516edc2755df89
+2025-04-15 18:54:10 INFO  [main] AppInfoParser - Kafka startTimeMs: 1744732450781
+2025-04-15 18:54:10 INFO  [main] KafkaConsumer - [Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] Subscribed to topic(s): chat-messages
+2025-04-15 18:54:10 INFO  [main] SimpleBrokerMessageHandler - Starting...
+2025-04-15 18:54:10 INFO  [main] SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@36f2a2a3]]
+2025-04-15 18:54:10 INFO  [main] SimpleBrokerMessageHandler - Started.
+2025-04-15 18:54:10 INFO  [main] NetSoc - Started NetSoc in 7.226 seconds (process running for 8.134)
+2025-04-15 18:54:10 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] Metadata - [Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] Resetting the last seen epoch of partition chat-messages-0 to 0 since the associated topicId changed from null to 1Y2CMws1SiqyyS88mQ2jwQ
+2025-04-15 18:54:10 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] Metadata - [Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] Cluster ID: GZVqrzjOQVe1jhiunlqsMQ
+2025-04-15 18:54:11 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] ConsumerCoordinator - [Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-04-15 18:54:11 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] ConsumerCoordinator - [Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] (Re-)joining group
+2025-04-15 18:54:11 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] ConsumerCoordinator - [Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] Request joining group due to: need to re-join with the given member-id: consumer-netSoc-group-1-fa0ccb88-eb05-4df2-88e1-2e6e2b7e322f
+2025-04-15 18:54:11 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] ConsumerCoordinator - [Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
+2025-04-15 18:54:11 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] ConsumerCoordinator - [Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] (Re-)joining group
+2025-04-15 18:54:14 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] ConsumerCoordinator - [Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] Successfully joined group with generation Generation{generationId=1, memberId='consumer-netSoc-group-1-fa0ccb88-eb05-4df2-88e1-2e6e2b7e322f', protocol='range'}
+2025-04-15 18:54:14 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] ConsumerCoordinator - [Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] Finished assignment for group at generation 1: {consumer-netSoc-group-1-fa0ccb88-eb05-4df2-88e1-2e6e2b7e322f=Assignment(partitions=[chat-messages-0])}
+2025-04-15 18:54:14 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] ConsumerCoordinator - [Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] Successfully synced group in generation Generation{generationId=1, memberId='consumer-netSoc-group-1-fa0ccb88-eb05-4df2-88e1-2e6e2b7e322f', protocol='range'}
+2025-04-15 18:54:14 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] ConsumerCoordinator - [Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] Notifying assignor about the new Assignment(partitions=[chat-messages-0])
+2025-04-15 18:54:14 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] ConsumerCoordinator - [Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] Adding newly assigned partitions: chat-messages-0
+2025-04-15 18:54:14 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] ConsumerCoordinator - [Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] Found no committed offset for partition chat-messages-0
+2025-04-15 18:54:15 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] SubscriptionState - [Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] Resetting offset for partition chat-messages-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1 rack: null)], epoch=0}}.
+2025-04-15 18:54:15 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] KafkaMessageListenerContainer - netSoc-group: partitions assigned: [chat-messages-0]
+2025-04-15 18:54:32 INFO  [SpringApplicationShutdownHook] SimpleBrokerMessageHandler - Stopping...
+2025-04-15 18:54:32 INFO  [SpringApplicationShutdownHook] SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@36f2a2a3]]
+2025-04-15 18:54:32 INFO  [SpringApplicationShutdownHook] SimpleBrokerMessageHandler - Stopped.
+2025-04-15 18:54:32 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] ConsumerCoordinator - [Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] Revoke previously assigned partitions chat-messages-0
+2025-04-15 18:54:32 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] KafkaMessageListenerContainer - netSoc-group: partitions revoked: [chat-messages-0]
+2025-04-15 18:54:32 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] ConsumerCoordinator - [Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] Member consumer-netSoc-group-1-fa0ccb88-eb05-4df2-88e1-2e6e2b7e322f sending LeaveGroup request to coordinator localhost:9092 (id: 2147483646 rack: null) due to the consumer unsubscribed from all topics
+2025-04-15 18:54:32 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] ConsumerCoordinator - [Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] Resetting generation and member id due to: consumer pro-actively leaving the group
+2025-04-15 18:54:32 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] ConsumerCoordinator - [Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] Request joining group due to: consumer pro-actively leaving the group
+2025-04-15 18:54:32 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] KafkaConsumer - [Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] Unsubscribed all topics or patterns and assigned partitions
+2025-04-15 18:54:32 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] ConsumerCoordinator - [Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] Resetting generation and member id due to: consumer pro-actively leaving the group
+2025-04-15 18:54:32 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] ConsumerCoordinator - [Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] Request joining group due to: consumer pro-actively leaving the group
+2025-04-15 18:54:32 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] Metrics - Metrics scheduler closed
+2025-04-15 18:54:32 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2025-04-15 18:54:32 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] Metrics - Metrics reporters closed
+2025-04-15 18:54:32 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] AppInfoParser - App info kafka.consumer for consumer-netSoc-group-1 unregistered
+2025-04-15 18:54:32 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] KafkaMessageListenerContainer - netSoc-group: Consumer stopped
+2025-04-15 18:54:32 INFO  [SpringApplicationShutdownHook] LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-15 18:54:32 INFO  [SpringApplicationShutdownHook] HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-04-15 18:54:32 INFO  [SpringApplicationShutdownHook] HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-04-15 19:05:26 INFO  [background-preinit] Version - HV000001: Hibernate Validator 8.0.1.Final
+2025-04-15 19:05:26 INFO  [main] NetSoc - Starting NetSoc using Java 21.0.6 with PID 3592 (C:\Users\IdeaProjects\netSoc\app\build\classes\java\main started by Глеб in C:\Users\IdeaProjects\netSoc)
+2025-04-15 19:05:26 DEBUG [main] NetSoc - Running with Spring Boot v3.1.3, Spring v6.0.11
+2025-04-15 19:05:26 INFO  [main] NetSoc - No active profile set, falling back to 1 default profile: "default"
+2025-04-15 19:05:27 INFO  [main] RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-04-15 19:05:27 INFO  [main] RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-15 19:05:27 INFO  [main] RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 149 ms. Found 2 JPA repository interfaces.
+2025-04-15 19:05:27 INFO  [main] RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-04-15 19:05:27 INFO  [main] RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-04-15 19:05:27 INFO  [main] RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface org.example.repositories.ChatMessageRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-04-15 19:05:27 INFO  [main] RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface org.example.repositories.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-04-15 19:05:27 INFO  [main] RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
+2025-04-15 19:05:28 INFO  [main] TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-04-15 19:05:28 INFO  [main] Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-04-15 19:05:28 INFO  [main] StandardService - Starting service [Tomcat]
+2025-04-15 19:05:28 INFO  [main] StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.12]
+2025-04-15 19:05:28 INFO  [main] [/] - Initializing Spring embedded WebApplicationContext
+2025-04-15 19:05:28 INFO  [main] ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1715 ms
+2025-04-15 19:05:28 INFO  [main] VersionPrinter - Flyway Community Edition 9.16.3 by Redgate
+2025-04-15 19:05:28 INFO  [main] VersionPrinter - See release notes here: https://rd.gt/416ObMi
+2025-04-15 19:05:28 INFO  [main] VersionPrinter - 
+2025-04-15 19:05:28 INFO  [main] HikariDataSource - HikariPool-1 - Starting...
+2025-04-15 19:05:28 INFO  [main] HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5d800a56
+2025-04-15 19:05:28 INFO  [main] HikariDataSource - HikariPool-1 - Start completed.
+2025-04-15 19:05:28 INFO  [main] BaseDatabaseType - Database: jdbc:postgresql://localhost:5432/socialdb (PostgreSQL 17.4)
+2025-04-15 19:05:28 WARN  [main] Database - Flyway upgrade recommended: PostgreSQL 17.4 is newer than this version of Flyway and support has not been tested. The latest supported version of PostgreSQL is 15.
+2025-04-15 19:05:28 INFO  [main] DbValidate - Successfully validated 1 migration (execution time 00:00.031s)
+2025-04-15 19:05:28 INFO  [main] DbMigrate - Current version of schema "public": 1
+2025-04-15 19:05:28 INFO  [main] DbMigrate - Schema "public" is up to date. No migration necessary.
+2025-04-15 19:05:28 INFO  [main] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-15 19:05:29 INFO  [main] Version - HHH000412: Hibernate ORM core version 6.2.7.Final
+2025-04-15 19:05:29 INFO  [main] Environment - HHH000406: Using bytecode reflection optimizer
+2025-04-15 19:05:29 INFO  [main] BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2025-04-15 19:05:29 INFO  [main] SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-15 19:05:29 INFO  [main] BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2025-04-15 19:05:30 INFO  [main] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-04-15 19:05:30 INFO  [main] LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-15 19:05:30 INFO  [main] QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-04-15 19:05:31 WARN  [main] JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-15 19:05:31 INFO  [main] DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@159b4611, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2073d71b, org.springframework.security.web.context.SecurityContextHolderFilter@4d048945, org.springframework.security.web.header.HeaderWriterFilter@43898d09, org.springframework.security.web.csrf.CsrfFilter@3f114f13, org.springframework.security.web.authentication.logout.LogoutFilter@3eacf08e, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@1352211d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@39fcbb42, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1000fbae, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@22ab40c1, org.springframework.security.web.access.ExceptionTranslationFilter@1f7286d5, org.springframework.security.web.access.intercept.AuthorizationFilter@426ee667]
+2025-04-15 19:05:32 WARN  [main] UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 25f0bfbd-e385-41e8-8655-dcf181e82634
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-04-15 19:05:32 INFO  [main] AdminClientConfig - AdminClientConfig values: 
+	auto.include.jmx.reporter = true
+	bootstrap.servers = [localhost:9092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2025-04-15 19:05:32 INFO  [main] AppInfoParser - Kafka version: 3.4.1
+2025-04-15 19:05:32 INFO  [main] AppInfoParser - Kafka commitId: 8a516edc2755df89
+2025-04-15 19:05:32 INFO  [main] AppInfoParser - Kafka startTimeMs: 1744733132513
+2025-04-15 19:05:32 INFO  [kafka-admin-client-thread | adminclient-1] AppInfoParser - App info kafka.admin.client for adminclient-1 unregistered
+2025-04-15 19:05:32 INFO  [kafka-admin-client-thread | adminclient-1] Metrics - Metrics scheduler closed
+2025-04-15 19:05:32 INFO  [kafka-admin-client-thread | adminclient-1] Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2025-04-15 19:05:32 INFO  [kafka-admin-client-thread | adminclient-1] Metrics - Metrics reporters closed
+2025-04-15 19:05:32 INFO  [main] Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-04-15 19:05:32 INFO  [main] TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-04-15 19:05:33 INFO  [main] ConsumerConfig - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-netSoc-group-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = netSoc-group
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2025-04-15 19:05:33 INFO  [main] AppInfoParser - Kafka version: 3.4.1
+2025-04-15 19:05:33 INFO  [main] AppInfoParser - Kafka commitId: 8a516edc2755df89
+2025-04-15 19:05:33 INFO  [main] AppInfoParser - Kafka startTimeMs: 1744733133087
+2025-04-15 19:05:33 INFO  [main] KafkaConsumer - [Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] Subscribed to topic(s): chat-messages
+2025-04-15 19:05:33 INFO  [main] SimpleBrokerMessageHandler - Starting...
+2025-04-15 19:05:33 INFO  [main] SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@329e9ff4]]
+2025-04-15 19:05:33 INFO  [main] SimpleBrokerMessageHandler - Started.
+2025-04-15 19:05:33 INFO  [main] NetSoc - Started NetSoc in 7.134 seconds (process running for 7.985)
+2025-04-15 19:05:33 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] Metadata - [Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] Resetting the last seen epoch of partition chat-messages-0 to 0 since the associated topicId changed from null to 1Y2CMws1SiqyyS88mQ2jwQ
+2025-04-15 19:05:33 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] Metadata - [Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] Cluster ID: GZVqrzjOQVe1jhiunlqsMQ
+2025-04-15 19:05:33 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] ConsumerCoordinator - [Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-04-15 19:05:33 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] ConsumerCoordinator - [Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] (Re-)joining group
+2025-04-15 19:05:33 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] ConsumerCoordinator - [Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] Request joining group due to: need to re-join with the given member-id: consumer-netSoc-group-1-93a6e123-da3a-43c9-9c2f-af58bf217b85
+2025-04-15 19:05:33 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] ConsumerCoordinator - [Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
+2025-04-15 19:05:33 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] ConsumerCoordinator - [Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] (Re-)joining group
+2025-04-15 19:05:36 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] ConsumerCoordinator - [Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] Successfully joined group with generation Generation{generationId=1, memberId='consumer-netSoc-group-1-93a6e123-da3a-43c9-9c2f-af58bf217b85', protocol='range'}
+2025-04-15 19:05:36 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] ConsumerCoordinator - [Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] Finished assignment for group at generation 1: {consumer-netSoc-group-1-93a6e123-da3a-43c9-9c2f-af58bf217b85=Assignment(partitions=[chat-messages-0])}
+2025-04-15 19:05:36 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] ConsumerCoordinator - [Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] Successfully synced group in generation Generation{generationId=1, memberId='consumer-netSoc-group-1-93a6e123-da3a-43c9-9c2f-af58bf217b85', protocol='range'}
+2025-04-15 19:05:36 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] ConsumerCoordinator - [Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] Notifying assignor about the new Assignment(partitions=[chat-messages-0])
+2025-04-15 19:05:36 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] ConsumerCoordinator - [Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] Adding newly assigned partitions: chat-messages-0
+2025-04-15 19:05:36 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] ConsumerCoordinator - [Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] Found no committed offset for partition chat-messages-0
+2025-04-15 19:05:36 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] SubscriptionState - [Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] Resetting offset for partition chat-messages-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1 rack: null)], epoch=0}}.
+2025-04-15 19:05:36 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] KafkaMessageListenerContainer - netSoc-group: partitions assigned: [chat-messages-0]
+2025-04-15 19:06:32 INFO  [MessageBroker-1] WebSocketMessageBrokerStats - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2025-04-15 19:10:59 INFO  [SpringApplicationShutdownHook] SimpleBrokerMessageHandler - Stopping...
+2025-04-15 19:10:59 INFO  [SpringApplicationShutdownHook] SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@329e9ff4]]
+2025-04-15 19:10:59 INFO  [SpringApplicationShutdownHook] SimpleBrokerMessageHandler - Stopped.
+2025-04-15 19:10:59 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] ConsumerCoordinator - [Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] Revoke previously assigned partitions chat-messages-0
+2025-04-15 19:10:59 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] KafkaMessageListenerContainer - netSoc-group: partitions revoked: [chat-messages-0]
+2025-04-15 19:10:59 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] ConsumerCoordinator - [Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] Member consumer-netSoc-group-1-93a6e123-da3a-43c9-9c2f-af58bf217b85 sending LeaveGroup request to coordinator localhost:9092 (id: 2147483646 rack: null) due to the consumer unsubscribed from all topics
+2025-04-15 19:10:59 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] ConsumerCoordinator - [Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] Resetting generation and member id due to: consumer pro-actively leaving the group
+2025-04-15 19:10:59 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] ConsumerCoordinator - [Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] Request joining group due to: consumer pro-actively leaving the group
+2025-04-15 19:10:59 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] KafkaConsumer - [Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] Unsubscribed all topics or patterns and assigned partitions
+2025-04-15 19:10:59 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] ConsumerCoordinator - [Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] Resetting generation and member id due to: consumer pro-actively leaving the group
+2025-04-15 19:10:59 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] ConsumerCoordinator - [Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] Request joining group due to: consumer pro-actively leaving the group
+2025-04-15 19:10:59 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] Metrics - Metrics scheduler closed
+2025-04-15 19:10:59 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2025-04-15 19:10:59 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] Metrics - Metrics reporters closed
+2025-04-15 19:10:59 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] AppInfoParser - App info kafka.consumer for consumer-netSoc-group-1 unregistered
+2025-04-15 19:10:59 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] KafkaMessageListenerContainer - netSoc-group: Consumer stopped
+2025-04-15 19:10:59 INFO  [SpringApplicationShutdownHook] LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-15 19:10:59 INFO  [SpringApplicationShutdownHook] HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-04-15 19:10:59 INFO  [SpringApplicationShutdownHook] HikariDataSource - HikariPool-1 - Shutdown completed.
+HV000001: Hibernate Validator 8.0.1.Final
+Starting NetSoc using Java 21.0.6 with PID 3664 (C:\Users\IdeaProjects\netSoc\app\build\classes\java\main started by Глеб in C:\Users\IdeaProjects\netSoc)
+Running with Spring Boot v3.1.3, Spring v6.0.11
+No active profile set, falling back to 1 default profile: "default"
+Multiple Spring Data modules found, entering strict repository configuration mode
+Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+Finished Spring Data repository scanning in 146 ms. Found 2 JPA repository interfaces.
+Multiple Spring Data modules found, entering strict repository configuration mode
+Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface org.example.repositories.ChatMessageRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface org.example.repositories.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
+Tomcat initialized with port(s): 8080 (http)
+Initializing ProtocolHandler ["http-nio-8080"]
+Starting service [Tomcat]
+Starting Servlet engine: [Apache Tomcat/10.1.12]
+Initializing Spring embedded WebApplicationContext
+Root WebApplicationContext: initialization completed in 1693 ms
+Flyway Community Edition 9.16.3 by Redgate
+See release notes here: https://rd.gt/416ObMi
+
+HikariPool-1 - Starting...
+HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5d800a56
+HikariPool-1 - Start completed.
+Database: jdbc:postgresql://localhost:5432/socialdb (PostgreSQL 17.4)
+Flyway upgrade recommended: PostgreSQL 17.4 is newer than this version of Flyway and support has not been tested. The latest supported version of PostgreSQL is 15.
+Successfully validated 1 migration (execution time 00:00.026s)
+Current version of schema "public": 1
+Schema "public" is up to date. No migration necessary.
+HHH000204: Processing PersistenceUnitInfo [name: default]
+HHH000412: Hibernate ORM core version 6.2.7.Final
+HHH000406: Using bytecode reflection optimizer
+HHH000021: Bytecode provider name : bytebuddy
+No LoadTimeWeaver setup: ignoring JPA class transformer
+HHH000021: Bytecode provider name : bytebuddy
+HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+Initialized JPA EntityManagerFactory for persistence unit 'default'
+Hibernate is in classpath; If applicable, HQL parser will be used.
+spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3b5299a3, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@393d1a05, org.springframework.security.web.context.SecurityContextHolderFilter@78a4914d, org.springframework.security.web.header.HeaderWriterFilter@1b18f38f, org.springframework.security.web.csrf.CsrfFilter@7dae9ff4, org.springframework.security.web.authentication.logout.LogoutFilter@9d313fe, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@6183dd2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1f7286d5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@87060c0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7e8c465d, org.springframework.security.web.access.ExceptionTranslationFilter@20c3f386, org.springframework.security.web.access.intercept.AuthorizationFilter@2464c125]
+
+
+Using generated security password: 6db436ef-5483-41e1-909c-61d15f7405be
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+AdminClientConfig values: 
+	auto.include.jmx.reporter = true
+	bootstrap.servers = [localhost:9092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+Kafka version: 3.4.1
+Kafka commitId: 8a516edc2755df89
+Kafka startTimeMs: 1744733469272
+App info kafka.admin.client for adminclient-1 unregistered
+Metrics scheduler closed
+Closing reporter org.apache.kafka.common.metrics.JmxReporter
+Metrics reporters closed
+Starting ProtocolHandler ["http-nio-8080"]
+Tomcat started on port(s): 8080 (http) with context path ''
+ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-netSoc-group-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = netSoc-group
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+Kafka version: 3.4.1
+Kafka commitId: 8a516edc2755df89
+Kafka startTimeMs: 1744733469739
+[Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] Subscribed to topic(s): chat-messages
+Starting...
+BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@7b80cc47]]
+Started.
+Started NetSoc in 6.667 seconds (process running for 7.453)
+[Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] Resetting the last seen epoch of partition chat-messages-0 to 0 since the associated topicId changed from null to 1Y2CMws1SiqyyS88mQ2jwQ
+[Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] Cluster ID: GZVqrzjOQVe1jhiunlqsMQ
+[Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+[Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] (Re-)joining group
+[Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] Request joining group due to: need to re-join with the given member-id: consumer-netSoc-group-1-1d8fa62f-c6dd-4105-acb9-81e28ae0c913
+[Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
+[Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] (Re-)joining group
+[Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] Successfully joined group with generation Generation{generationId=3, memberId='consumer-netSoc-group-1-1d8fa62f-c6dd-4105-acb9-81e28ae0c913', protocol='range'}
+[Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] Finished assignment for group at generation 3: {consumer-netSoc-group-1-1d8fa62f-c6dd-4105-acb9-81e28ae0c913=Assignment(partitions=[chat-messages-0])}
+[Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] Successfully synced group in generation Generation{generationId=3, memberId='consumer-netSoc-group-1-1d8fa62f-c6dd-4105-acb9-81e28ae0c913', protocol='range'}
+[Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] Notifying assignor about the new Assignment(partitions=[chat-messages-0])
+[Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] Adding newly assigned partitions: chat-messages-0
+[Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] Found no committed offset for partition chat-messages-0
+[Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] Resetting offset for partition chat-messages-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1 rack: null)], epoch=0}}.
+netSoc-group: partitions assigned: [chat-messages-0]
+Stopping...
+BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@7b80cc47]]
+Stopped.
+[Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] Revoke previously assigned partitions chat-messages-0
+netSoc-group: partitions revoked: [chat-messages-0]
+[Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] Member consumer-netSoc-group-1-1d8fa62f-c6dd-4105-acb9-81e28ae0c913 sending LeaveGroup request to coordinator localhost:9092 (id: 2147483646 rack: null) due to the consumer unsubscribed from all topics
+[Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] Resetting generation and member id due to: consumer pro-actively leaving the group
+[Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] Request joining group due to: consumer pro-actively leaving the group
+[Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] Unsubscribed all topics or patterns and assigned partitions
+[Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] Resetting generation and member id due to: consumer pro-actively leaving the group
+[Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] Request joining group due to: consumer pro-actively leaving the group
+Metrics scheduler closed
+Closing reporter org.apache.kafka.common.metrics.JmxReporter
+Metrics reporters closed
+App info kafka.consumer for consumer-netSoc-group-1 unregistered
+netSoc-group: Consumer stopped
+Closing JPA EntityManagerFactory for persistence unit 'default'
+HikariPool-1 - Shutdown initiated...
+HikariPool-1 - Shutdown completed.
+HV000001: Hibernate Validator 8.0.1.Final
+Starting NetSoc using Java 21.0.6 with PID 13560 (C:\Users\IdeaProjects\netSoc\app\build\classes\java\main started by Глеб in C:\Users\IdeaProjects\netSoc)
+Running with Spring Boot v3.1.3, Spring v6.0.11
+No active profile set, falling back to 1 default profile: "default"
+Multiple Spring Data modules found, entering strict repository configuration mode
+Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+Finished Spring Data repository scanning in 164 ms. Found 2 JPA repository interfaces.
+Multiple Spring Data modules found, entering strict repository configuration mode
+Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface org.example.repositories.ChatMessageRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+Spring Data Redis - Could not safely identify store assignment for repository candidate interface org.example.repositories.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
+Tomcat initialized with port(s): 8080 (http)
+Initializing ProtocolHandler ["http-nio-8080"]
+Starting service [Tomcat]
+Starting Servlet engine: [Apache Tomcat/10.1.12]
+Initializing Spring embedded WebApplicationContext
+Root WebApplicationContext: initialization completed in 1629 ms
+Flyway Community Edition 9.16.3 by Redgate
+See release notes here: https://rd.gt/416ObMi
+
+HikariPool-1 - Starting...
+HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3b33fff9
+HikariPool-1 - Start completed.
+Database: jdbc:postgresql://localhost:5432/socialdb (PostgreSQL 17.4)
+Flyway upgrade recommended: PostgreSQL 17.4 is newer than this version of Flyway and support has not been tested. The latest supported version of PostgreSQL is 15.
+Successfully validated 1 migration (execution time 00:00.024s)
+Current version of schema "public": 1
+Schema "public" is up to date. No migration necessary.
+HHH000204: Processing PersistenceUnitInfo [name: default]
+HHH000412: Hibernate ORM core version 6.2.7.Final
+HHH000406: Using bytecode reflection optimizer
+HHH000021: Bytecode provider name : bytebuddy
+No LoadTimeWeaver setup: ignoring JPA class transformer
+HHH000021: Bytecode provider name : bytebuddy
+HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+Initialized JPA EntityManagerFactory for persistence unit 'default'
+Hibernate is in classpath; If applicable, HQL parser will be used.
+spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@770d65c2, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@44acce5d, org.springframework.security.web.context.SecurityContextHolderFilter@7e122a87, org.springframework.security.web.header.HeaderWriterFilter@53e7dfc4, org.springframework.security.web.csrf.CsrfFilter@2baf9c62, org.springframework.security.web.authentication.logout.LogoutFilter@669bb57, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@2e1a8c1a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@20c3f386, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1a0252c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3eacf08e, org.springframework.security.web.access.ExceptionTranslationFilter@5b610c90, org.springframework.security.web.access.intercept.AuthorizationFilter@74e8ef59]
+
+
+Using generated security password: a2a02fcd-088c-4aa9-b7e0-11e1b6a2619f
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+AdminClientConfig values: 
+	auto.include.jmx.reporter = true
+	bootstrap.servers = [localhost:9092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+Kafka version: 3.4.1
+Kafka commitId: 8a516edc2755df89
+Kafka startTimeMs: 1744733485495
+App info kafka.admin.client for adminclient-1 unregistered
+Metrics scheduler closed
+Closing reporter org.apache.kafka.common.metrics.JmxReporter
+Metrics reporters closed
+Starting ProtocolHandler ["http-nio-8080"]
+Tomcat started on port(s): 8080 (http) with context path ''
+ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-netSoc-group-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = netSoc-group
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+Kafka version: 3.4.1
+Kafka commitId: 8a516edc2755df89
+Kafka startTimeMs: 1744733485972
+[Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] Subscribed to topic(s): chat-messages
+Starting...
+BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@799cb334]]
+Started.
+Started NetSoc in 6.692 seconds (process running for 7.469)
+[Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] Resetting the last seen epoch of partition chat-messages-0 to 0 since the associated topicId changed from null to 1Y2CMws1SiqyyS88mQ2jwQ
+[Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] Cluster ID: GZVqrzjOQVe1jhiunlqsMQ
+[Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+[Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] (Re-)joining group
+[Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] Request joining group due to: need to re-join with the given member-id: consumer-netSoc-group-1-244225b6-b3e1-4b95-ad8f-0f67c365c7b0
+[Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
+[Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] (Re-)joining group
+[Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] Successfully joined group with generation Generation{generationId=5, memberId='consumer-netSoc-group-1-244225b6-b3e1-4b95-ad8f-0f67c365c7b0', protocol='range'}
+[Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] Finished assignment for group at generation 5: {consumer-netSoc-group-1-244225b6-b3e1-4b95-ad8f-0f67c365c7b0=Assignment(partitions=[chat-messages-0])}
+[Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] Successfully synced group in generation Generation{generationId=5, memberId='consumer-netSoc-group-1-244225b6-b3e1-4b95-ad8f-0f67c365c7b0', protocol='range'}
+[Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] Notifying assignor about the new Assignment(partitions=[chat-messages-0])
+[Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] Adding newly assigned partitions: chat-messages-0
+[Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] Found no committed offset for partition chat-messages-0
+[Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] Resetting offset for partition chat-messages-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1 rack: null)], epoch=0}}.
+netSoc-group: partitions assigned: [chat-messages-0]
+Stopping...
+BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@799cb334]]
+Stopped.
+[Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] Revoke previously assigned partitions chat-messages-0
+netSoc-group: partitions revoked: [chat-messages-0]
+[Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] Member consumer-netSoc-group-1-244225b6-b3e1-4b95-ad8f-0f67c365c7b0 sending LeaveGroup request to coordinator localhost:9092 (id: 2147483646 rack: null) due to the consumer unsubscribed from all topics
+[Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] Resetting generation and member id due to: consumer pro-actively leaving the group
+[Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] Request joining group due to: consumer pro-actively leaving the group
+[Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] Unsubscribed all topics or patterns and assigned partitions
+[Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] Resetting generation and member id due to: consumer pro-actively leaving the group
+[Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] Request joining group due to: consumer pro-actively leaving the group
+Metrics scheduler closed
+Closing reporter org.apache.kafka.common.metrics.JmxReporter
+Metrics reporters closed
+App info kafka.consumer for consumer-netSoc-group-1 unregistered
+netSoc-group: Consumer stopped
+Closing JPA EntityManagerFactory for persistence unit 'default'
+HikariPool-1 - Shutdown initiated...
+HikariPool-1 - Shutdown completed.
+2025-04-15 19:11:41 INFO  [background-preinit] Version - HV000001: Hibernate Validator 8.0.1.Final
+2025-04-15 19:11:41 INFO  [main] NetSoc - Starting NetSoc using Java 21.0.6 with PID 4456 (C:\Users\IdeaProjects\netSoc\app\build\classes\java\main started by Глеб in C:\Users\IdeaProjects\netSoc)
+2025-04-15 19:11:41 DEBUG [main] NetSoc - Running with Spring Boot v3.1.3, Spring v6.0.11
+2025-04-15 19:11:41 INFO  [main] NetSoc - No active profile set, falling back to 1 default profile: "default"
+2025-04-15 19:11:42 INFO  [main] RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-04-15 19:11:42 INFO  [main] RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-15 19:11:42 INFO  [main] RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 137 ms. Found 2 JPA repository interfaces.
+2025-04-15 19:11:42 INFO  [main] RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-04-15 19:11:42 INFO  [main] RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-04-15 19:11:42 INFO  [main] RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface org.example.repositories.ChatMessageRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-04-15 19:11:42 INFO  [main] RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface org.example.repositories.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-04-15 19:11:42 INFO  [main] RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
+2025-04-15 19:11:42 INFO  [main] TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-04-15 19:11:42 INFO  [main] Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-04-15 19:11:42 INFO  [main] StandardService - Starting service [Tomcat]
+2025-04-15 19:11:42 INFO  [main] StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.12]
+2025-04-15 19:11:43 INFO  [main] [/] - Initializing Spring embedded WebApplicationContext
+2025-04-15 19:11:43 INFO  [main] ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1619 ms
+2025-04-15 19:11:43 INFO  [main] VersionPrinter - Flyway Community Edition 9.16.3 by Redgate
+2025-04-15 19:11:43 INFO  [main] VersionPrinter - See release notes here: https://rd.gt/416ObMi
+2025-04-15 19:11:43 INFO  [main] VersionPrinter - 
+2025-04-15 19:11:43 INFO  [main] HikariDataSource - HikariPool-1 - Starting...
+2025-04-15 19:11:43 INFO  [main] HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@636e4bf8
+2025-04-15 19:11:43 INFO  [main] HikariDataSource - HikariPool-1 - Start completed.
+2025-04-15 19:11:43 INFO  [main] BaseDatabaseType - Database: jdbc:postgresql://localhost:5432/socialdb (PostgreSQL 17.4)
+2025-04-15 19:11:43 WARN  [main] Database - Flyway upgrade recommended: PostgreSQL 17.4 is newer than this version of Flyway and support has not been tested. The latest supported version of PostgreSQL is 15.
+2025-04-15 19:11:43 INFO  [main] DbValidate - Successfully validated 1 migration (execution time 00:00.025s)
+2025-04-15 19:11:43 INFO  [main] DbMigrate - Current version of schema "public": 1
+2025-04-15 19:11:43 INFO  [main] DbMigrate - Schema "public" is up to date. No migration necessary.
+2025-04-15 19:11:43 INFO  [main] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-15 19:11:43 INFO  [main] Version - HHH000412: Hibernate ORM core version 6.2.7.Final
+2025-04-15 19:11:43 INFO  [main] Environment - HHH000406: Using bytecode reflection optimizer
+2025-04-15 19:11:43 INFO  [main] BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2025-04-15 19:11:44 INFO  [main] SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-15 19:11:44 INFO  [main] BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2025-04-15 19:11:45 INFO  [main] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-04-15 19:11:45 INFO  [main] LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-15 19:11:45 INFO  [main] QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-04-15 19:11:46 WARN  [main] JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-15 19:11:46 INFO  [main] DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@ff03384, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@159b4611, org.springframework.security.web.context.SecurityContextHolderFilter@87060c0, org.springframework.security.web.header.HeaderWriterFilter@1f7b4952, org.springframework.security.web.csrf.CsrfFilter@66a75eab, org.springframework.security.web.authentication.logout.LogoutFilter@44acce5d, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@426ee667, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@42eaa429, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4cfa6fd8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2073d71b, org.springframework.security.web.access.ExceptionTranslationFilter@24fc815d, org.springframework.security.web.access.intercept.AuthorizationFilter@6d5ef5ee]
+2025-04-15 19:11:46 WARN  [main] UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: be15c5ee-8dd0-4344-a534-9911af0da6e4
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-04-15 19:11:47 INFO  [main] AdminClientConfig - AdminClientConfig values: 
+	auto.include.jmx.reporter = true
+	bootstrap.servers = [localhost:9092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2025-04-15 19:11:47 INFO  [main] AppInfoParser - Kafka version: 3.4.1
+2025-04-15 19:11:47 INFO  [main] AppInfoParser - Kafka commitId: 8a516edc2755df89
+2025-04-15 19:11:47 INFO  [main] AppInfoParser - Kafka startTimeMs: 1744733507117
+2025-04-15 19:11:47 INFO  [kafka-admin-client-thread | adminclient-1] AppInfoParser - App info kafka.admin.client for adminclient-1 unregistered
+2025-04-15 19:11:47 INFO  [kafka-admin-client-thread | adminclient-1] Metrics - Metrics scheduler closed
+2025-04-15 19:11:47 INFO  [kafka-admin-client-thread | adminclient-1] Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2025-04-15 19:11:47 INFO  [kafka-admin-client-thread | adminclient-1] Metrics - Metrics reporters closed
+2025-04-15 19:11:47 INFO  [main] Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-04-15 19:11:47 INFO  [main] TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-04-15 19:11:47 INFO  [main] ConsumerConfig - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-netSoc-group-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = netSoc-group
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2025-04-15 19:11:47 INFO  [main] AppInfoParser - Kafka version: 3.4.1
+2025-04-15 19:11:47 INFO  [main] AppInfoParser - Kafka commitId: 8a516edc2755df89
+2025-04-15 19:11:47 INFO  [main] AppInfoParser - Kafka startTimeMs: 1744733507574
+2025-04-15 19:11:47 INFO  [main] KafkaConsumer - [Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] Subscribed to topic(s): chat-messages
+2025-04-15 19:11:47 INFO  [main] SimpleBrokerMessageHandler - Starting...
+2025-04-15 19:11:47 INFO  [main] SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@7fdd29f3]]
+2025-04-15 19:11:47 INFO  [main] SimpleBrokerMessageHandler - Started.
+2025-04-15 19:11:47 INFO  [main] NetSoc - Started NetSoc in 6.715 seconds (process running for 7.532)
+2025-04-15 19:11:47 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] Metadata - [Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] Resetting the last seen epoch of partition chat-messages-0 to 0 since the associated topicId changed from null to 1Y2CMws1SiqyyS88mQ2jwQ
+2025-04-15 19:11:47 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] Metadata - [Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] Cluster ID: GZVqrzjOQVe1jhiunlqsMQ
+2025-04-15 19:11:47 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] ConsumerCoordinator - [Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-04-15 19:11:47 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] ConsumerCoordinator - [Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] (Re-)joining group
+2025-04-15 19:11:47 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] ConsumerCoordinator - [Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] Request joining group due to: need to re-join with the given member-id: consumer-netSoc-group-1-f70b7525-476c-4ef8-b12d-c0d21c2f437c
+2025-04-15 19:11:47 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] ConsumerCoordinator - [Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
+2025-04-15 19:11:47 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] ConsumerCoordinator - [Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] (Re-)joining group
+2025-04-15 19:11:50 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] ConsumerCoordinator - [Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] Successfully joined group with generation Generation{generationId=7, memberId='consumer-netSoc-group-1-f70b7525-476c-4ef8-b12d-c0d21c2f437c', protocol='range'}
+2025-04-15 19:11:50 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] ConsumerCoordinator - [Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] Finished assignment for group at generation 7: {consumer-netSoc-group-1-f70b7525-476c-4ef8-b12d-c0d21c2f437c=Assignment(partitions=[chat-messages-0])}
+2025-04-15 19:11:50 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] ConsumerCoordinator - [Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] Successfully synced group in generation Generation{generationId=7, memberId='consumer-netSoc-group-1-f70b7525-476c-4ef8-b12d-c0d21c2f437c', protocol='range'}
+2025-04-15 19:11:50 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] ConsumerCoordinator - [Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] Notifying assignor about the new Assignment(partitions=[chat-messages-0])
+2025-04-15 19:11:50 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] ConsumerCoordinator - [Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] Adding newly assigned partitions: chat-messages-0
+2025-04-15 19:11:50 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] ConsumerCoordinator - [Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] Found no committed offset for partition chat-messages-0
+2025-04-15 19:11:50 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] SubscriptionState - [Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] Resetting offset for partition chat-messages-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1 rack: null)], epoch=0}}.
+2025-04-15 19:11:50 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] KafkaMessageListenerContainer - netSoc-group: partitions assigned: [chat-messages-0]
+2025-04-15 19:11:56 INFO  [SpringApplicationShutdownHook] SimpleBrokerMessageHandler - Stopping...
+2025-04-15 19:11:56 INFO  [SpringApplicationShutdownHook] SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@7fdd29f3]]
+2025-04-15 19:11:56 INFO  [SpringApplicationShutdownHook] SimpleBrokerMessageHandler - Stopped.
+2025-04-15 19:11:56 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] ConsumerCoordinator - [Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] Revoke previously assigned partitions chat-messages-0
+2025-04-15 19:11:56 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] KafkaMessageListenerContainer - netSoc-group: partitions revoked: [chat-messages-0]
+2025-04-15 19:11:56 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] ConsumerCoordinator - [Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] Member consumer-netSoc-group-1-f70b7525-476c-4ef8-b12d-c0d21c2f437c sending LeaveGroup request to coordinator localhost:9092 (id: 2147483646 rack: null) due to the consumer unsubscribed from all topics
+2025-04-15 19:11:56 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] ConsumerCoordinator - [Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] Resetting generation and member id due to: consumer pro-actively leaving the group
+2025-04-15 19:11:56 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] ConsumerCoordinator - [Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] Request joining group due to: consumer pro-actively leaving the group
+2025-04-15 19:11:56 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] KafkaConsumer - [Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] Unsubscribed all topics or patterns and assigned partitions
+2025-04-15 19:11:56 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] ConsumerCoordinator - [Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] Resetting generation and member id due to: consumer pro-actively leaving the group
+2025-04-15 19:11:56 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] ConsumerCoordinator - [Consumer clientId=consumer-netSoc-group-1, groupId=netSoc-group] Request joining group due to: consumer pro-actively leaving the group
+2025-04-15 19:11:56 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] Metrics - Metrics scheduler closed
+2025-04-15 19:11:56 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2025-04-15 19:11:56 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] Metrics - Metrics reporters closed
+2025-04-15 19:11:56 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] AppInfoParser - App info kafka.consumer for consumer-netSoc-group-1 unregistered
+2025-04-15 19:11:56 INFO  [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] KafkaMessageListenerContainer - netSoc-group: Consumer stopped

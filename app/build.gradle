@@ -8,6 +8,14 @@ plugins {
 repositories {
     mavenCentral()
 }
+bootRun {
+    if (project.hasProperty('args')) {
+        args project.args.split(',')
+    }
+}
+configurations.all {
+    exclude group: 'org.springframework.boot', module: 'spring-boot-starter-logging'
+}
 bootJar {
     enabled = false
 }
@@ -24,8 +32,14 @@ dependencies {
     testImplementation 'org.springframework.security:spring-security-test'
     runtimeOnly 'org.postgresql:postgresql'
 
+    implementation 'org.springframework.boot:spring-boot-starter-data-redis'
+    implementation 'org.springframework.boot:spring-boot-starter-cache'
+
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
-    implementation 'org.springframework.boot:spring-boot-starter-web'
+
+
+    implementation 'org.springframework.boot:spring-boot-starter-log4j2:3.3.1'
+
     implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
     implementation 'org.springframework.boot:spring-boot-starter-websocket'
     implementation 'javax.servlet:javax.servlet-api:4.0.1'
