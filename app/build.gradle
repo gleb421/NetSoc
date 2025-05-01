@@ -8,6 +8,11 @@ plugins {
 repositories {
     mavenCentral()
 }
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
 bootRun {
     if (project.hasProperty('args')) {
         args project.args.split(',')

@@ -1,9 +1,14 @@
 version: '3.8'
 
 services:
+
+  # ======================
+  # 📦 База данных
+  # ======================
   postgres:
-    image: postgres:17
+    image: postgres:15
     container_name: social_postgres
+    restart: unless-stopped
     environment:
       POSTGRES_DB: socialdb
       POSTGRES_USER: postgres
@@ -13,12 +18,19 @@ services:
     volumes:
       - pg_data:/var/lib/postgresql/data
 
+  # ======================
+  # 🧠 Redis (для сессий)
+  # ======================
   redis:
     image: redis:7
     container_name: social_redis
+    restart: unless-stopped
     ports:
       - "6379:6379"
 
+  # ======================
+  # 🐘 Kafka & ZooKeeper
+  # ======================
   zookeeper:
     image: confluentinc/cp-zookeeper:7.5.0
     container_name: social_zookeeper
@@ -31,6 +43,7 @@ services:
   kafka:
     image: confluentinc/cp-kafka:7.5.0
     container_name: social_kafka
+    restart: unless-stopped
     depends_on:
       - zookeeper
     ports:
@@ -39,8 +52,67 @@ services:
       KAFKA_BROKER_ID: 1
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
       KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT
-      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://localhost:9092
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+
+  # ======================
+  # 🚪 Gateway (Spring Cloud Gateway)
+  # ======================
+  gateway-service:
+    build:
+      context: .
+      dockerfile: gateway-service/Dockerfile
+    container_name: gateway
+    ports:
+      - "8080:8080"
+    depends_on:
+      - user-service
+      - chat-service
+    environment:
+      SPRING_PROFILES_ACTIVE: docker
+
+  # ======================
+  # 👤 User-service
+  # ======================
+  user-service:
+    build:
+      context: .
+      dockerfile: user-service/Dockerfile
+    container_name: user-service
+    depends_on:
+      - postgres
+      - kafka
+      - redis
+    environment:
+      SPRING_PROFILES_ACTIVE: docker
+
+  # ======================
+  # 💬 Chat-service
+  # ======================
+  chat-service:
+    build:
+      context: .
+      dockerfile: chat-service/Dockerfile
+    container_name: chat-service
+    depends_on:
+      - user-service
+      - kafka
+      - redis
+    environment:
+      SPRING_PROFILES_ACTIVE: docker
+
+  # ======================
+  # 🔔 Notification-service
+  # ======================
+  notification-service:
+    build:
+      context: .
+      dockerfile: notification-service/Dockerfile
+    container_name: notification-service
+    depends_on:
+      - kafka
+    environment:
+      SPRING_PROFILES_ACTIVE: docker
 
 volumes:
   pg_data:
