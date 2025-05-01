@@ -2,8 +2,7 @@
 FROM gradle:8.5-jdk21 AS builder
 WORKDIR /app
 COPY . .
-RUN gradle :notfication-service:bootJar --no-daemon
-
+RUN gradle bootJar --no-daemon
 # ---- Финальный образ ----
 FROM eclipse-temurin:21-jdk-alpine
 WORKDIR /app
