@@ -1,0 +1,783 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="37d4845a-aa0b-4e53-bd39-43ffaa3b016c" name="Changes" comment="update: dockerfiles">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/chat-service">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/common-lib">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/gateway-service">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/user-service">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$/app">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$/app/controller">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$/chat-service">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$/user-service">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$/common">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$/common-lib">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$/gateway-service">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="netSoc" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="netSoc" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+        <option value="Interface" />
+        <option value="com.intellij.jpb.NewClass" />
+        <option value="Class" />
+        <option value="Dockerfile" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Merge.Settings">
+    <option name="BRANCH" value="origin/main" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;gleb421&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/gleb421/NetSoc.git&quot;,
+    &quot;accountId&quot;: &quot;d27a13db-08d6-457a-9053-0ff654abf445&quot;
+  }
+}</component>
+  <component name="JpbToolWindowState">
+    <option name="isToolWindowVisible" value="false" />
+  </component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="2vMCnkbViYhgyu4YpJYYotdF7To" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "Docker.app.postgres: Compose Deployment.executor": "Run",
+    "Docker.app: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yml.kafka: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yml.postgres: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yml.redis: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yml: Compose Deployment.executor": "Run",
+    "Downloaded.Files.Path.Enabled": "false",
+    "Gradle.Build netSoc.executor": "Run",
+    "Gradle.ChatMessageControllerTest (1).executor": "Run",
+    "Gradle.ChatMessageControllerTest.executor": "Run",
+    "Gradle.ChatMessageControllerTest.testGetMessages.executor": "Run",
+    "Gradle.ChatMessageControllerTest.testSendMessage.executor": "Debug",
+    "Gradle.DatabaseConnectionTest.executor": "Run",
+    "Gradle.Tests in 'netSoc.app.controller.test' (1).executor": "Debug",
+    "Gradle.Tests in 'netSoc.app.controller.test'.executor": "Run",
+    "Gradle.UserServiceTest (1).executor": "Debug",
+    "Gradle.UserServiceTest.executor": "Run",
+    "Gradle.WebSocketChatControllerTest.executor": "Run",
+    "Gradle.chat-service [build].executor": "Run",
+    "Gradle.chat-service [clean].executor": "Run",
+    "Gradle.common-lib [build].executor": "Run",
+    "Gradle.gateway-service [dependencyManagement].executor": "Run",
+    "Gradle.netSoc [:app:build].executor": "Run",
+    "Gradle.netSoc [:app:clean].executor": "Run",
+    "Gradle.netSoc [:common-lib:build].executor": "Run",
+    "Gradle.netSoc [:common-lib:clean].executor": "Run",
+    "Gradle.netSoc [:gateway-service:buildDependents].executor": "Run",
+    "Gradle.netSoc [:gateway-service:buildNeeded].executor": "Run",
+    "Gradle.netSoc [:gateway-service:build].executor": "Run",
+    "Gradle.netSoc [:gateway-service:clean].executor": "Run",
+    "Gradle.netSoc [:notification-service:build].executor": "Run",
+    "Gradle.netSoc [:notification-service:clean].executor": "Run",
+    "Gradle.netSoc [:user-service:build].executor": "Run",
+    "Gradle.netSoc [:user-service:clean].executor": "Run",
+    "Gradle.netSoc [buildDependents].executor": "Run",
+    "Gradle.netSoc [build].executor": "Run",
+    "Gradle.netSoc [clean].executor": "Run",
+    "Gradle.netSoc [dependencies].executor": "Run",
+    "Gradle.netSoc:app [buildDependents].executor": "Run",
+    "Gradle.netSoc:app [build].executor": "Run",
+    "Gradle.netSoc:app [clean].executor": "Run",
+    "Gradle.netSoc:app:controller [build].executor": "Run",
+    "Gradle.netSoc:common [buildDependents].executor": "Run",
+    "Gradle.netSoc:common [build].executor": "Run",
+    "Gradle.netSoc:common [clean].executor": "Run",
+    "Gradle.user-service [buildDependents].executor": "Run",
+    "Gradle.user-service [build].executor": "Run",
+    "Gradle.user-service [clean].executor": "Run",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.ChatServiceApplication.executor": "Debug",
+    "Spring Boot.NetSoc (1).executor": "Run",
+    "Spring Boot.NetSoc.executor": "Run",
+    "Spring Boot.UserServiceApplication.executor": "Debug",
+    "database.data.extractors.current.export.id": "JSON-Groovy.json.groovy",
+    "database.data.extractors.current.id": "JSON-Groovy.json.groovy",
+    "git-widget-placeholder": "microservices",
+    "jdk.selected.JAVA_MODULE": "corretto-21",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/IdeaProjects/netSoc/notification-service/src/main/resources",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "C:/Users/IdeaProjects/netSoc/app/kafka-messaging/src/main/java/org/example/Main.java",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "run.configurations.included.in.services": "true",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "redis",
+      "postgresql"
+    ]
+  }
+}]]></component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\IdeaProjects\netSoc\notification-service\src\main\resources" />
+      <recent name="C:\Users\IdeaProjects\netSoc\gateway-service\src\main\resources" />
+      <recent name="C:\Users\IdeaProjects\netSoc\chat-service\src\main\resources" />
+      <recent name="C:\Users\IdeaProjects\netSoc\gateway-service\src\main\java\org\example\gatewayservice\config" />
+      <recent name="C:\Users\IdeaProjects\netSoc\user-service\src\main\java\org\example\userservice\config" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\IdeaProjects\netSoc\user-service\src\main\resources\templates" />
+      <recent name="C:\Users\IdeaProjects\netSoc\chat-service\src\main\resources" />
+      <recent name="C:\Users\IdeaProjects\netSoc\app\src\main\resources" />
+      <recent name="C:\Users\IdeaProjects\netSoc\app\logs" />
+      <recent name="C:\Users\IdeaProjects\netSoc" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.example.userservice.controller" />
+      <recent name="org.example.chatservice.controller" />
+      <recent name="org.example.chatservice" />
+      <recent name="org.example.userservice.config" />
+      <recent name="org.example.chatservice.config" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="KtorApplicationConfigurationType" />
+        <option value="MicronautRunConfigurationType" />
+        <option value="QuarkusRunConfigurationType" />
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Gradle.netSoc [:user-service:clean]">
+    <configuration name="chat-service [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/chat-service" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="clean" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="netSoc [:common-lib:clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":common-lib:clean" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="netSoc [:gateway-service:build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":gateway-service:build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="netSoc [:notification-service:clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":notification-service:clean" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="netSoc [:user-service:clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":user-service:clean" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="ChatServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="netSoc.chat-service.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.example.chatservice.ChatServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CommonLibApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="netSoc.common.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.example.commonlib.CommonLibApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CommonLibApplication (2)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="netSoc.common-lib.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.example.common.CommonLibApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CommonLibApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="common-lib.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.example.commonlib.CommonLibApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GatewayServiceApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="netSoc.gateway-service.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.example.gatewayservice.GatewayServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GatewayServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="gateway-service.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.example.gatewayservice.GatewayServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NetSoc" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="netSoc.app.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.example.NetSoc" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NotificationServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="netSoc.notification-service.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.example.notificationservice.NotificationServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="netSoc.user-service.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.example.userservice.UserServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.netSoc [:user-service:clean]" />
+        <item itemvalue="Gradle.netSoc [:notification-service:clean]" />
+        <item itemvalue="Gradle.netSoc [:gateway-service:build]" />
+        <item itemvalue="Gradle.netSoc [:common-lib:clean]" />
+        <item itemvalue="Gradle.chat-service [clean]" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23726.103" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23726.103" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="37d4845a-aa0b-4e53-bd39-43ffaa3b016c" name="Changes" comment="" />
+      <created>1743945727649</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1743945727649</updated>
+      <workItem from="1743945728744" duration="2094000" />
+      <workItem from="1743947939478" duration="2329000" />
+      <workItem from="1743950300609" duration="6142000" />
+      <workItem from="1743956548506" duration="8232000" />
+      <workItem from="1743970536149" duration="64000" />
+      <workItem from="1743970624104" duration="754000" />
+      <workItem from="1743971395210" duration="464000" />
+      <workItem from="1743971923842" duration="8506000" />
+      <workItem from="1744020276669" duration="12124000" />
+      <workItem from="1744033590720" duration="25000" />
+      <workItem from="1744034401420" duration="45000" />
+      <workItem from="1744046972515" duration="3741000" />
+      <workItem from="1744051301209" duration="9456000" />
+      <workItem from="1744146417123" duration="3221000" />
+      <workItem from="1744188973690" duration="2543000" />
+      <workItem from="1744280187820" duration="2000" />
+      <workItem from="1744289802301" duration="13570000" />
+      <workItem from="1744626269255" duration="4000" />
+      <workItem from="1744653790427" duration="3780000" />
+      <workItem from="1744658228742" duration="7628000" />
+      <workItem from="1744719509110" duration="2992000" />
+      <workItem from="1744724380223" duration="5203000" />
+      <workItem from="1744730894279" duration="681000" />
+      <workItem from="1744731860983" duration="5087000" />
+      <workItem from="1744739058911" duration="3626000" />
+      <workItem from="1744754105796" duration="2932000" />
+      <workItem from="1744805515082" duration="9993000" />
+      <workItem from="1744888342125" duration="7000" />
+      <workItem from="1744888376601" duration="9697000" />
+      <workItem from="1745686989481" duration="12943000" />
+      <workItem from="1745753670543" duration="8603000" />
+      <workItem from="1745935211738" duration="77000" />
+      <workItem from="1745935318863" duration="7270000" />
+      <workItem from="1745963799592" duration="2634000" />
+      <workItem from="1746012429636" duration="18362000" />
+      <workItem from="1746103564112" duration="8101000" />
+    </task>
+    <task id="LOCAL-00001" summary="initial commit">
+      <option name="closed" value="true" />
+      <created>1744062829206</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1744062829206</updated>
+    </task>
+    <task id="LOCAL-00002" summary="del useless">
+      <option name="closed" value="true" />
+      <created>1744063127228</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1744063127228</updated>
+    </task>
+    <task id="LOCAL-00003" summary="check">
+      <option name="closed" value="true" />
+      <created>1744063411323</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1744063411323</updated>
+    </task>
+    <task id="LOCAL-00004" summary="check">
+      <option name="closed" value="true" />
+      <created>1744063529546</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1744063529546</updated>
+    </task>
+    <task id="LOCAL-00005" summary="ref">
+      <option name="closed" value="true" />
+      <created>1744735988110</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1744735988110</updated>
+    </task>
+    <task id="LOCAL-00006" summary="start migration to microservice">
+      <option name="closed" value="true" />
+      <created>1744811854743</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1744811854743</updated>
+    </task>
+    <task id="LOCAL-00007" summary="finish migration to microservice">
+      <option name="closed" value="true" />
+      <created>1746109269747</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1746109269747</updated>
+    </task>
+    <task id="LOCAL-00008" summary="ci/cd">
+      <option name="closed" value="true" />
+      <created>1746112024473</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1746112024473</updated>
+    </task>
+    <task id="LOCAL-00009" summary="update: dockerfiles">
+      <option name="closed" value="true" />
+      <created>1746112961840</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1746112961840</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.gz" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="initial commit" />
+    <MESSAGE value="del useless" />
+    <MESSAGE value="check" />
+    <MESSAGE value="ref" />
+    <MESSAGE value="start migration to microservice" />
+    <MESSAGE value="finish migration to microservice" />
+    <MESSAGE value="ci/cd" />
+    <MESSAGE value="update: dockerfiles" />
+    <option name="LAST_COMMIT_MESSAGE" value="update: dockerfiles" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/Main.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/org/example/Main.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/controller/src/main/java/org/example/controller/ChatMessageController.java</url>
+          <line>44</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/controller/src/test/java/org/example/controller/ChatMessageControllerTest.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/controller/src/main/java/org/example/controller/MainController.java</url>
+          <line>88</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/service/src/test/java/UserServiceTest.java</url>
+          <line>28</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/controller/src/main/java/org/example/controller/MainController.java</url>
+          <line>64</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/controller/src/main/java/org/example/controller/MainController.java</url>
+          <line>35</line>
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/service/src/main/java/org/example/UserService.java</url>
+          <line>24</line>
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/user-service/src/main/java/org/example/userservice/controller/MainController.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/chat-service/src/main/java/org/example/chatservice/controller/ChatMessageController.java</url>
+          <line>41</line>
+          <option name="timeStamp" value="48" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/chat-service/src/main/java/org/example/chatservice/service/ChatMessageService.java</url>
+          <line>19</line>
+          <option name="timeStamp" value="49" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/chat-service/src/main/java/org/example/chatservice/service/ChatMessageService.java</url>
+          <line>20</line>
+          <option name="timeStamp" value="52" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/notification-service/src/main/java/org/example/notificationservice/kafka/NotificationListener.java</url>
+          <line>45</line>
+          <option name="timeStamp" value="60" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/chat-service/src/main/java/org/example/chatservice/controller/ChatController.java</url>
+          <line>53</line>
+          <option name="timeStamp" value="61" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/chat-service/src/main/java/org/example/chatservice/kafka/KafkaMessageProducer.java</url>
+          <line>21</line>
+          <option name="timeStamp" value="62" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/chat-service/src/main/java/org/example/chatservice/kafka/KafkaMessageProducer.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="65" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/app/controller/src/main/resources/static/chat.js</url>
+          <line>56</line>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/app/controller/src/main/resources/static/chat.js</url>
+          <line>73</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/app/controller/src/main/resources/static/chat.js</url>
+          <line>76</line>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/app/controller/src/main/resources/static/chat.js</url>
+          <line>121</line>
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/app/controller/src/main/java/org/example/config/WebSecurityConfig.java</url>
+          <line>68</line>
+          <properties class="org.example.config.WebSecurityConfig" method="initialize">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/chat-service/src/main/java/org/example/chatservice/controller/ChatMessageController.java</url>
+          <line>47</line>
+          <properties class="org.example.chatservice.controller.ChatMessageController" method="getFriends">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="47" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/chat-service/src/main/java/org/example/chatservice/service/ChatMessageService.java</url>
+          <line>18</line>
+          <properties class="org.example.chatservice.service.ChatMessageService" method="saveMessage">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="50" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/chat-service/src/main/java/org/example/chatservice/service/ChatMessageService.java</url>
+          <line>28</line>
+          <properties class="org.example.chatservice.service.ChatMessageService" method="getMessagesBetweenUsers">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="51" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/chat-service/src/main/java/org/example/chatservice/kafka/KafkaMessageProducer.java</url>
+          <line>20</line>
+          <properties class="org.example.chatservice.kafka.KafkaMessageProducer" method="sendMessage">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="63" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/chat-service/src/main/java/org/example/chatservice/kafka/KafkaMessageProducer.java</url>
+          <line>25</line>
+          <properties class="org.example.chatservice.kafka.KafkaMessageProducer" method="sendNewMessageEvent">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="64" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

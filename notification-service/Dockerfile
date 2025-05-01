@@ -1,5 +1,5 @@
 # ---- Стадия сборки ----
-FROM gradle:9.0-jdk21 AS builder
+FROM gradle:8.5-jdk21 AS builder
 WORKDIR /app
 COPY . .
 RUN gradle :notfication-service:bootJar --no-daemon
