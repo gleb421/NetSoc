@@ -6,15 +6,12 @@ on:
       - main
 
 jobs:
-  build-and-push:
+  docker:
     runs-on: ubuntu-latest
 
     steps:
-      - name: 🧾 Checkout code
+      - name: 🛎 Checkout code
         uses: actions/checkout@v3
-
-      - name: 🐳 Set up Docker Buildx
-        uses: docker/setup-buildx-action@v2
 
       - name: 🔐 Log in to Docker Hub
         uses: docker/login-action@v2
@@ -22,14 +19,37 @@ jobs:
           username: ${{ secrets.DOCKER_HUB_USERNAME }}
           password: ${{ secrets.DOCKER_HUB_TOKEN }}
 
-      - name: 📦 Build and push images
+      - name: 🔧 Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
+
+      - name: 🐳 Build and push user-service
         uses: docker/build-push-action@v5
         with:
+          context: ./user-service
+          file: ./user-service/Dockerfile
           push: true
-          tags: |
-            your-dockerhub-username/user-service:latest
-            your-dockerhub-username/chat-service:latest
-            your-dockerhub-username/gateway-service:latest
-            your-dockerhub-username/notification-service:latest
-          build-args: |
-            SPRING_PROFILES_ACTIVE=docker
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/user-service:latest
+
+      - name: 🐳 Build and push chat-service
+        uses: docker/build-push-action@v5
+        with:
+          context: ./chat-service
+          file: ./chat-service/Dockerfile
+          push: true
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/chat-service:latest
+
+      - name: 🐳 Build and push gateway-service
+        uses: docker/build-push-action@v5
+        with:
+          context: ./gateway-service
+          file: ./gateway-service/Dockerfile
+          push: true
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/gateway-service:latest
+
+      - name: 🐳 Build and push notification-service
+        uses: docker/build-push-action@v5
+        with:
+          context: ./notification-service
+          file: ./notification-service/Dockerfile
+          push: true
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/notification-service:latest
