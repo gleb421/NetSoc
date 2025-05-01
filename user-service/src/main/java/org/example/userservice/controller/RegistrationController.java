@@ -2,6 +2,7 @@ package org.example.userservice.controller;
 
 
 import lombok.RequiredArgsConstructor;
+import org.apache.kafka.clients.producer.KafkaProducer;
 import org.example.userservice.model.Role;
 import org.example.userservice.model.User;
 import org.example.userservice.repository.UserRepository;
@@ -21,7 +22,6 @@ public class RegistrationController {
     private UserRepository userRepo;
     @Autowired
     private UserService userService;
-
     @GetMapping("/registration")
     public String registration(){
         return "/registration";

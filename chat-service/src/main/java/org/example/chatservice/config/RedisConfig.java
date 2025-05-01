@@ -1,4 +1,4 @@
-package org.example.userservice.config;
+package org.example.chatservice.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

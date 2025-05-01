@@ -4,9 +4,13 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;
 import org.example.common.dto.ChatMessageDto;
 
+import org.example.common.event.NewMessageEvent;
 import org.example.common.event.UserCreatedEvent;
+import org.example.common.kafka.KafkaTopics;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Component;
+
+import static org.example.common.kafka.KafkaTopics.NEW_MESSAGE;
 
 @Component
 @RequiredArgsConstructor
@@ -31,9 +35,22 @@ public class NotificationListener {
         try {
             UserCreatedEvent user = objectMapper.readValue(messageJson, UserCreatedEvent.class);
             System.out.printf("🎉 Новый пользователь: %s (ID: %d)%n", user.getUsername(), user.getUserId());
-            // здесь можно вызвать: emailService.sendWelcomeEmail()
         } catch (Exception e) {
             System.err.println("❌ Ошибка парсинга user-registered: " + e.getMessage());
         }
     }
+
+    @KafkaListener(topics = NEW_MESSAGE, groupId = "notification-group")
+    public void handleNewMessage(String json) {
+        try {
+            NewMessageEvent event = objectMapper.readValue(json, NewMessageEvent.class);
+            System.out.printf("🔔 Сообщение для %d от %s: %s%n",
+                    event.getReceiverId(), event.getSenderUsername(), event.getContent());
+        } catch (Exception e) {
+            System.err.println("Ошибка парсинга NewMessageEvent: " + e.getMessage());
+        }
+    }
+
+
+
 }

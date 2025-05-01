@@ -12,12 +12,16 @@ services:
       - "5432:5432"
     volumes:
       - pg_data:/var/lib/postgresql/data
+    networks:
+      - backend
 
   redis:
     image: redis:7
     container_name: social_redis
     ports:
       - "6379:6379"
+    networks:
+      - backend
 
   zookeeper:
     image: confluentinc/cp-zookeeper:7.5.0
@@ -27,6 +31,8 @@ services:
       ZOOKEEPER_TICK_TIME: 2000
     ports:
       - "2181:2181"
+    networks:
+      - backend
 
   kafka:
     image: confluentinc/cp-kafka:7.5.0
@@ -39,8 +45,65 @@ services:
       KAFKA_BROKER_ID: 1
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
       KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT
-      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://localhost:9092
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+    networks:
+      - backend
+
+  gateway-service:
+    image: youruser/gateway-service:latest
+    depends_on:
+      - user-service
+      - chat-service
+    ports:
+      - "80:8080"
+    environment:
+      SPRING_PROFILES_ACTIVE: prod
+    networks:
+      - backend
+
+  user-service:
+    image: youruser/user-service:latest
+    depends_on:
+      - postgres
+      - redis
+    environment:
+      SPRING_PROFILES_ACTIVE: prod
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/socialdb
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: password
+      SPRING_REDIS_HOST: redis
+    networks:
+      - backend
+
+  chat-service:
+    image: youruser/chat-service:latest
+    depends_on:
+      - postgres
+      - redis
+      - kafka
+    environment:
+      SPRING_PROFILES_ACTIVE: prod
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/socialdb
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: password
+      SPRING_REDIS_HOST: redis
+      SPRING_KAFKA_BOOTSTRAP_SERVERS: kafka:9092
+    networks:
+      - backend
+
+  notification-service:
+    image: youruser/notification-service:latest
+    depends_on:
+      - kafka
+    environment:
+      SPRING_PROFILES_ACTIVE: prod
+      SPRING_KAFKA_BOOTSTRAP_SERVERS: kafka:9092
+    networks:
+      - backend
 
 volumes:
   pg_data:
+
+networks:
+  backend:
