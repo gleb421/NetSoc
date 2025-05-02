@@ -2,13 +2,13 @@
 FROM gradle:8.5-jdk21 AS builder
 
 # Создаем рабочую директорию
-WORKDIR /netSoc
+WORKDIR /app
 
 # Копируем всю монорепу (предполагается, что Dockerfile находится в ./notification-service)
 COPY ../ .
 
 # Переходим в notification-service и собираем
-WORKDIR /netSoc/user-service
+WORKDIR /app/user-service
 RUN gradle bootJar --no-daemon
 
 # 🧊 Финальный минимальный образ
