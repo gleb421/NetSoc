@@ -2,7 +2,7 @@
 FROM gradle:8.5-jdk21 AS builder
 
 # Создаем директорию сборки
-WORKDIR /app
+WORKDIR /netSoc
 
 # Копируем сам сервис
 COPY . .
@@ -12,7 +12,7 @@ RUN gradle bootJar --no-daemon
 # 🧊 Финальный образ
 FROM eclipse-temurin:21-jdk-alpine
 
-WORKDIR /app
-COPY --from=builder /app/user-service/build/libs/*.jar app.jar
+WORKDIR /netSoc
+COPY --from=builder /netSoc/user-service/build/libs/*.jar app.jar
 EXPOSE 8080
 ENTRYPOINT ["java", "-jar", "app.jar"]
