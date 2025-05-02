@@ -9,8 +9,7 @@ COPY ../ .
 
 # Переходим в notification-service и собираем
 WORKDIR /app/user-service
-RUN gradle bootJar --no-daemon
-
+RUN ./gradlew :user-service:bootJar --no-daemon
 # 🧊 Финальный минимальный образ
 FROM eclipse-temurin:21-jdk-alpine
 
