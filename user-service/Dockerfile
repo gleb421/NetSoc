@@ -7,7 +7,7 @@ COPY . .
 RUN gradle bootJar --no-daemon
 FROM eclipse-temurin:21-jdk-alpine
 
-WORKDIR /netSoc
-COPY --from=builder /netSoc/user-service/build/libs/*.jar app.jar
+WORKDIR /app
+COPY --from=builder /app/user-service/build/libs/*.jar app.jar
 EXPOSE 8080
 ENTRYPOINT ["java", "-jar", "app.jar"]
