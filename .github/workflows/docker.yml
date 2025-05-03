@@ -22,34 +22,34 @@ jobs:
       - name: 🐳 Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
 
-      - name: 🚀 Build and push user-service
+      - name: 🧱 Build and push user-service
         uses: docker/build-push-action@v5
         with:
-          context: ./user-service
+          context: .
           file: ./user-service/Dockerfile
           push: true
           tags: ${{ secrets.DOCKER_HUB_USERNAME }}/user-service:latest
 
-      - name: 🚀 Build and push chat-service
+      - name: 🧱 Build and push chat-service
         uses: docker/build-push-action@v5
         with:
-          context: ./chat-service
+          context: .
           file: ./chat-service/Dockerfile
           push: true
           tags: ${{ secrets.DOCKER_HUB_USERNAME }}/chat-service:latest
 
-      - name: 🚀 Build and push notification-service
+      - name: 🧱 Build and push notification-service
         uses: docker/build-push-action@v5
         with:
-          context: ./notification-service
+          context: .
           file: ./notification-service/Dockerfile
           push: true
           tags: ${{ secrets.DOCKER_HUB_USERNAME }}/notification-service:latest
 
-      - name: 🚀 Build and push gateway-service
+      - name: 🧱 Build and push gateway-service
         uses: docker/build-push-action@v5
         with:
-          context: ./gateway-service
+          context: .
           file: ./gateway-service/Dockerfile
           push: true
           tags: ${{ secrets.DOCKER_HUB_USERNAME }}/gateway-service:latest
