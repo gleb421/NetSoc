@@ -1,13 +1,14 @@
 # 🛠 Стадия сборки
 FROM gradle:8.5-jdk21 AS builder
 
-WORKDIR /netSoc
+# Создаем рабочую директорию
+WORKDIR /netSoc/notification-service
 
-# Копируем всю монорепу в контейнер
 COPY . .
 
-# Сборка из корня — модуль notification-service будет собран вместе с зависимостями
-RUN gradle :notification-service:bootJar --no-daemon
+# Переходим в notification-service и собираем
+WORKDIR /netSoc/notification-service
+RUN gradle bootJar --no-daemon
 
 # 🧊 Финальный минимальный образ
 FROM eclipse-temurin:21-jdk-alpine

@@ -1,15 +1,11 @@
 package org.example.userservice.controller;
 
-
-import lombok.RequiredArgsConstructor;
-import org.apache.kafka.clients.producer.KafkaProducer;
 import org.example.userservice.model.Role;
 import org.example.userservice.model.User;
 import org.example.userservice.repository.UserRepository;
 import org.example.userservice.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Collections;

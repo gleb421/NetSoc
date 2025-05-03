@@ -2,10 +2,10 @@ package org.example.chatservice.controller;
 
 import lombok.RequiredArgsConstructor;
 import org.example.chatservice.dto.MessageRequestDto;
+import org.example.chatservice.dto.UserDto;
 import org.example.chatservice.model.ChatMessage;
 import org.example.chatservice.service.ChatMessageService;
 import org.example.chatservice.service.UserServiceClient;
-import org.example.common.dto.UserDto;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Arrays;

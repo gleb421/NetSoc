@@ -2,7 +2,7 @@ package org.example.userservice.service;
 
 import jakarta.persistence.EntityManager;
 import jakarta.transaction.Transactional;
-import org.example.common.event.UserCreatedEvent;
+import org.example.userservice.event.UserCreatedEvent;
 import org.example.userservice.kafka.UserProducer;
 import org.example.userservice.model.User;
 import org.example.userservice.repository.UserRepository;

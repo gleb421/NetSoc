@@ -2,11 +2,12 @@ package org.example.chatservice.kafka;
 
 import lombok.extern.slf4j.Slf4j;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
-import org.example.common.event.UserCreatedEvent;
+import org.example.chatservice.event.UserCreatedEvent;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Component;
 
-import static org.example.common.kafka.KafkaTopics.USER_REGISTERED;
+import static org.example.chatservice.kafka.KafkaTopics.USER_REGISTERED;
+
 
 @Slf4j
 @Component

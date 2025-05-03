@@ -2,15 +2,14 @@ package org.example.notificationservice.kafka;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;
-import org.example.common.dto.ChatMessageDto;
 
-import org.example.common.event.NewMessageEvent;
-import org.example.common.event.UserCreatedEvent;
-import org.example.common.kafka.KafkaTopics;
+import org.example.notificationservice.dto.ChatMessageDto;
+import org.example.notificationservice.event.NewMessageEvent;
+import org.example.notificationservice.event.UserCreatedEvent;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Component;
 
-import static org.example.common.kafka.KafkaTopics.NEW_MESSAGE;
+import static org.example.notificationservice.kafka.KafkaTopics.NEW_MESSAGE;
 
 @Component
 @RequiredArgsConstructor

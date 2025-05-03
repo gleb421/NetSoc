@@ -2,14 +2,15 @@ package org.example.chatservice.kafka;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.example.common.dto.ChatMessageDto;
-import org.example.common.event.NewMessageEvent;
-import org.example.common.kafka.KafkaTopics;
+
+import org.example.chatservice.dto.ChatMessageDto;
+import org.example.chatservice.event.NewMessageEvent;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 
-import static org.example.common.kafka.KafkaTopics.NEW_MESSAGE;
+import static org.example.chatservice.kafka.KafkaTopics.NEW_MESSAGE;
+
 
 @Slf4j
 @Service

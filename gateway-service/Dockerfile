@@ -2,10 +2,10 @@
 FROM gradle:8.5-jdk21 AS builder
 
 # Создаем рабочую директорию
-WORKDIR /netSoc
+WORKDIR /netSoc/gateway-service
 
 # Копируем всю монорепу (предполагается, что Dockerfile находится в ./notification-service)
-COPY ../ .
+COPY . .
 
 # Переходим в notification-service и собираем
 WORKDIR /netSoc/gateway-service

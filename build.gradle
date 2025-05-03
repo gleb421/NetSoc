@@ -1,0 +1,14 @@
+// Корневой build.gradle
+
+allprojects {
+    repositories {
+        mavenCentral()
+    }
+}
+
+// 🔧 Чтобы IDE не ругалась
+afterEvaluate {
+    if (!tasks.findByName("prepareKotlinBuildScriptModel")) {
+        tasks.register("prepareKotlinBuildScriptModel") {}
+    }
+}

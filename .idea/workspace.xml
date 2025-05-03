@@ -5,13 +5,44 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="37d4845a-aa0b-4e53-bd39-43ffaa3b016c" name="Changes" comment="update: dockerfiles">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-service/src/main/java/org/example/chatservice/dto/ChatMessageDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-service/src/main/java/org/example/chatservice/dto/UserDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-service/src/main/java/org/example/chatservice/event/NewMessageEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-service/src/main/java/org/example/chatservice/kafka/KafkaTopics.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-service/src/main/java/org/example/chatservice/util/JwtUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-service/src/main/java/org/example/notificationservice/dto/ChatMessageDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-service/src/main/java/org/example/notificationservice/dto/UserDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-service/src/main/java/org/example/notificationservice/event/NewMessageEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-service/src/main/java/org/example/notificationservice/event/UserCreatedEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-service/src/main/java/org/example/notificationservice/kafka/KafkaTopics.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/org/example/userservice/dto/UserDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/org/example/userservice/event/UserCreatedEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/org/example/userservice/kafka/KafkaTopics.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/org/example/userservice/util/JwtUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controller/src/main/java/org/example/config/RestTemplateConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/controller/src/main/java/org/example/config/RestTemplateConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-service/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/chat-service/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-service/src/main/java/org/example/chatservice/config/kafka/KafkaConsumerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/chat-service/src/main/java/org/example/chatservice/config/kafka/KafkaConsumerConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-service/src/main/java/org/example/chatservice/controller/ChatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/chat-service/src/main/java/org/example/chatservice/controller/ChatController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-service/src/main/java/org/example/chatservice/controller/ChatMessageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/chat-service/src/main/java/org/example/chatservice/controller/ChatMessageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-service/src/main/java/org/example/chatservice/kafka/KafkaMessageProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/chat-service/src/main/java/org/example/chatservice/kafka/KafkaMessageProducer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-service/src/main/java/org/example/chatservice/kafka/UserCreatedConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/chat-service/src/main/java/org/example/chatservice/kafka/UserCreatedConsumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-service/src/main/java/org/example/chatservice/service/UserServiceClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/chat-service/src/main/java/org/example/chatservice/service/UserServiceClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-service/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-service/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-service/src/main/java/org/example/notificationservice/kafka/NotificationListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/java/org/example/notificationservice/kafka/NotificationListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/org/example/userservice/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/org/example/userservice/config/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/org/example/userservice/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/org/example/userservice/controller/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/org/example/userservice/controller/RegistrationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/org/example/userservice/controller/RegistrationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/org/example/userservice/kafka/UserProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/org/example/userservice/kafka/UserProducer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/org/example/userservice/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/org/example/userservice/service/UserService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,8 +119,8 @@
         <option value="JavaScript File" />
         <option value="Interface" />
         <option value="com.intellij.jpb.NewClass" />
-        <option value="Class" />
         <option value="Dockerfile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -138,9 +169,15 @@
     "Docker.app.postgres: Compose Deployment.executor": "Run",
     "Docker.app: Compose Deployment.executor": "Run",
     "Docker.docker-compose.yml.kafka: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yml.notification-service: Compose Deployment.executor": "Run",
     "Docker.docker-compose.yml.postgres: Compose Deployment.executor": "Run",
     "Docker.docker-compose.yml.redis: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yml.user-service: Compose Deployment.executor": "Run",
     "Docker.docker-compose.yml: Compose Deployment.executor": "Run",
+    "Docker.gateway-service/Dockerfile.executor": "Run",
+    "Docker.notification-service/Dockerfile.executor": "Run",
+    "Docker.user-service/Dockerfile builder.executor": "Run",
+    "Docker.user-service/Dockerfile.executor": "Run",
     "Downloaded.Files.Path.Enabled": "false",
     "Gradle.Build netSoc.executor": "Run",
     "Gradle.ChatMessageControllerTest (1).executor": "Run",
@@ -159,6 +196,7 @@
     "Gradle.gateway-service [dependencyManagement].executor": "Run",
     "Gradle.netSoc [:app:build].executor": "Run",
     "Gradle.netSoc [:app:clean].executor": "Run",
+    "Gradle.netSoc [:chat-service:build].executor": "Run",
     "Gradle.netSoc [:common-lib:build].executor": "Run",
     "Gradle.netSoc [:common-lib:clean].executor": "Run",
     "Gradle.netSoc [:gateway-service:buildDependents].executor": "Run",
@@ -197,10 +235,10 @@
     "Spring Boot.UserServiceApplication.executor": "Debug",
     "database.data.extractors.current.export.id": "JSON-Groovy.json.groovy",
     "database.data.extractors.current.id": "JSON-Groovy.json.groovy",
-    "git-widget-placeholder": "microservices",
+    "git-widget-placeholder": "main",
     "jdk.selected.JAVA_MODULE": "corretto-21",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/IdeaProjects/netSoc/notification-service/src/main/resources",
+    "last_opened_file_path": "C:/Users/IdeaProjects/netSoc/notification-service/src/main/java/org/example/notificationservice/kafka",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -226,25 +264,25 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\IdeaProjects\netSoc\notification-service\src\main\java\org\example\notificationservice\kafka" />
+      <recent name="C:\Users\IdeaProjects\netSoc\notification-service\src\main\java\org\example\notificationservice" />
+      <recent name="C:\Users\IdeaProjects\netSoc\user-service\src\main\java\org\example\userservice" />
+      <recent name="C:\Users\IdeaProjects\netSoc\chat-service\src\main\java\org\example\chatservice" />
       <recent name="C:\Users\IdeaProjects\netSoc\notification-service\src\main\resources" />
-      <recent name="C:\Users\IdeaProjects\netSoc\gateway-service\src\main\resources" />
-      <recent name="C:\Users\IdeaProjects\netSoc\chat-service\src\main\resources" />
-      <recent name="C:\Users\IdeaProjects\netSoc\gateway-service\src\main\java\org\example\gatewayservice\config" />
-      <recent name="C:\Users\IdeaProjects\netSoc\user-service\src\main\java\org\example\userservice\config" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\IdeaProjects\netSoc" />
       <recent name="C:\Users\IdeaProjects\netSoc\user-service\src\main\resources\templates" />
       <recent name="C:\Users\IdeaProjects\netSoc\chat-service\src\main\resources" />
       <recent name="C:\Users\IdeaProjects\netSoc\app\src\main\resources" />
       <recent name="C:\Users\IdeaProjects\netSoc\app\logs" />
-      <recent name="C:\Users\IdeaProjects\netSoc" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.example.chatservice.dto" />
       <recent name="org.example.userservice.controller" />
       <recent name="org.example.chatservice.controller" />
       <recent name="org.example.chatservice" />
       <recent name="org.example.userservice.config" />
-      <recent name="org.example.chatservice.config" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -257,8 +295,8 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.netSoc [:user-service:clean]">
-    <configuration name="chat-service [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Docker.docker-compose.yml: Compose Deployment">
+    <configuration name="chat-service [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/chat-service" />
@@ -269,29 +307,7 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="clean" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="netSoc [:common-lib:clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":common-lib:clean" />
+            <option value="build" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -324,7 +340,7 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="netSoc [:notification-service:clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="netSoc [:notification-service:build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -335,29 +351,7 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value=":notification-service:clean" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="netSoc [:user-service:clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":user-service:clean" />
+            <option value=":notification-service:build" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -437,13 +431,35 @@
       </deployment>
       <method v="2" />
     </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
+      <deployment type="dockerfile">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="user-service/Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="sourceFilePath" value="user-service/Dockerfile" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.netSoc [:user-service:clean]" />
-        <item itemvalue="Gradle.netSoc [:notification-service:clean]" />
+        <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
         <item itemvalue="Gradle.netSoc [:gateway-service:build]" />
-        <item itemvalue="Gradle.netSoc [:common-lib:clean]" />
-        <item itemvalue="Gradle.chat-service [clean]" />
+        <item itemvalue="Gradle.chat-service [build]" />
+        <item itemvalue="Gradle.netSoc [:notification-service:build]" />
+        <item itemvalue="Docker.user-service/Dockerfile" />
       </list>
     </recent_temporary>
   </component>
@@ -499,6 +515,11 @@
       <workItem from="1745963799592" duration="2634000" />
       <workItem from="1746012429636" duration="18362000" />
       <workItem from="1746103564112" duration="8101000" />
+      <workItem from="1746208261424" duration="3969000" />
+      <workItem from="1746212958066" duration="7696000" />
+      <workItem from="1746266783037" duration="1420000" />
+      <workItem from="1746268230004" duration="2989000" />
+      <workItem from="1746271364903" duration="967000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -572,7 +593,23 @@
       <option name="project" value="LOCAL" />
       <updated>1746112961840</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="update: dockerfiles">
+      <option name="closed" value="true" />
+      <created>1746113647380</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1746113647380</updated>
+    </task>
+    <task id="LOCAL-00011" summary="update: dockerfiles">
+      <option name="closed" value="true" />
+      <created>1746208774502</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1746208774502</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -685,22 +722,22 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/notification-service/src/main/java/org/example/notificationservice/kafka/NotificationListener.java</url>
-          <line>45</line>
+          <line>44</line>
           <option name="timeStamp" value="60" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/chat-service/src/main/java/org/example/chatservice/controller/ChatController.java</url>
-          <line>53</line>
+          <line>52</line>
           <option name="timeStamp" value="61" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/chat-service/src/main/java/org/example/chatservice/kafka/KafkaMessageProducer.java</url>
-          <line>21</line>
+          <line>22</line>
           <option name="timeStamp" value="62" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/chat-service/src/main/java/org/example/chatservice/kafka/KafkaMessageProducer.java</url>
-          <line>26</line>
+          <line>27</line>
           <option name="timeStamp" value="65" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
@@ -726,7 +763,7 @@
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/app/controller/src/main/java/org/example/config/WebSecurityConfig.java</url>
           <line>68</line>
-          <properties class="org.example.config.WebSecurityConfig" method="initialize">
+          <properties class="org.example.config.WebSecurityConfig">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
@@ -744,7 +781,7 @@
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/chat-service/src/main/java/org/example/chatservice/service/ChatMessageService.java</url>
           <line>18</line>
-          <properties class="org.example.chatservice.service.ChatMessageService" method="saveMessage">
+          <properties class="org.example.chatservice.service.ChatMessageService">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
@@ -753,7 +790,7 @@
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/chat-service/src/main/java/org/example/chatservice/service/ChatMessageService.java</url>
           <line>28</line>
-          <properties class="org.example.chatservice.service.ChatMessageService" method="getMessagesBetweenUsers">
+          <properties class="org.example.chatservice.service.ChatMessageService">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
@@ -761,7 +798,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/chat-service/src/main/java/org/example/chatservice/kafka/KafkaMessageProducer.java</url>
-          <line>20</line>
+          <line>21</line>
           <properties class="org.example.chatservice.kafka.KafkaMessageProducer" method="sendMessage">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
@@ -770,7 +807,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/chat-service/src/main/java/org/example/chatservice/kafka/KafkaMessageProducer.java</url>
-          <line>25</line>
+          <line>26</line>
           <properties class="org.example.chatservice.kafka.KafkaMessageProducer" method="sendNewMessageEvent">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />

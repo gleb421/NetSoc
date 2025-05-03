@@ -58,26 +58,10 @@ services:
   # ======================
   # 🚪 Gateway (Spring Cloud Gateway)
   # ======================
-  gateway-service:
-    build:
-      context: .
-      dockerfile: gateway-service/Dockerfile
-    container_name: gateway
-    ports:
-      - "8080:8080"
-    depends_on:
-      - user-service
-      - chat-service
-    environment:
-      SPRING_PROFILES_ACTIVE: docker
-
-  # ======================
-  # 👤 User-service
-  # ======================
   user-service:
     build:
-      context: .
-      dockerfile: user-service/Dockerfile
+      context: ./user-service
+      dockerfile: Dockerfile
     container_name: user-service
     depends_on:
       - postgres
@@ -86,31 +70,37 @@ services:
     environment:
       SPRING_PROFILES_ACTIVE: docker
 
-  # ======================
-  # 💬 Chat-service
-  # ======================
   chat-service:
     build:
-      context: .
-      dockerfile: chat-service/Dockerfile
+      context: ./chat-service
+      dockerfile: Dockerfile
     container_name: chat-service
     depends_on:
       - user-service
       - kafka
-      - redis
     environment:
       SPRING_PROFILES_ACTIVE: docker
 
-  # ======================
-  # 🔔 Notification-service
-  # ======================
   notification-service:
     build:
-      context: .
-      dockerfile: notification-service/Dockerfile
+      context: ./notification-service
+      dockerfile: Dockerfile
     container_name: notification-service
     depends_on:
       - kafka
+    environment:
+      SPRING_PROFILES_ACTIVE: docker
+
+  gateway-service:
+    build:
+      context: ./gateway-service
+      dockerfile: Dockerfile
+    container_name: gateway
+    ports:
+      - "8080:8080"
+    depends_on:
+      - user-service
+      - chat-service
     environment:
       SPRING_PROFILES_ACTIVE: docker
 

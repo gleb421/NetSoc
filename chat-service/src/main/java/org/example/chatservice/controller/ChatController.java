@@ -1,13 +1,12 @@
 package org.example.chatservice.controller;
 
 import lombok.RequiredArgsConstructor;
+import org.example.chatservice.dto.ChatMessageDto;
+import org.example.chatservice.event.NewMessageEvent;
 import org.example.chatservice.kafka.KafkaMessageProducer;
 import org.example.chatservice.model.ChatMessage;
 import org.example.chatservice.service.ChatMessageService;
 import org.example.chatservice.service.UserServiceClient;
-import org.example.common.dto.ChatMessageDto;
-import org.example.common.dto.UserDto;
-import org.example.common.event.NewMessageEvent;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.stereotype.Controller;

@@ -1,8 +1,8 @@
 package org.example.userservice.controller;
 
 import jakarta.servlet.http.HttpSession;
-import org.example.common.dto.UserDto;
-import org.example.common.mapper.UserMapper;
+
+import org.example.userservice.dto.UserDto;
 import org.example.userservice.model.User;
 import org.example.userservice.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;

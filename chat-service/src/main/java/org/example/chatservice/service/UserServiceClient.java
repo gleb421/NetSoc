@@ -1,7 +1,7 @@
 package org.example.chatservice.service;
 
 import lombok.RequiredArgsConstructor;
-import org.example.common.dto.UserDto;
+import org.example.chatservice.dto.UserDto;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
