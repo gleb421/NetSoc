@@ -1,20 +1,11 @@
-# 🛠 Стадия сборки
 FROM gradle:8.5-jdk21 AS builder
-
-# Создаем рабочую директорию
-WORKDIR /netSoc/user-service
-
-# Копируем всю монорепу (предполагается, что Dockerfile находится в ./notification-service)
+WORKDIR /netSoc
 COPY . .
 
-# Переходим в notification-service и собираем
-WORKDIR /netSoc/user-service
-RUN gradle bootJar --no-daemon
+# 👇 Сборка из корня, с указанием подмодуля
+RUN ./gradlew :user-service:bootJar --no-daemon
 
-# 🧊 Финальный минимальный образ
 FROM eclipse-temurin:21-jdk-alpine
-
-WORKDIR /netSoc
+WORKDIR /app
 COPY --from=builder /netSoc/user-service/build/libs/*.jar app.jar
-
 ENTRYPOINT ["java", "-jar", "app.jar"]
