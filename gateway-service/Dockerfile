@@ -16,5 +16,4 @@ FROM eclipse-temurin:21-jdk-alpine
 
 WORKDIR /netSoc
 COPY --from=builder /netSoc/gateway-service/build/libs/*.jar app.jar
-
 ENTRYPOINT ["java", "-jar", "app.jar"]

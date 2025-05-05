@@ -6,7 +6,7 @@ services:
   # 📦 База данных
   # ======================
   postgres:
-    image: postgres:15
+    image: postgres:17
     container_name: social_postgres
     restart: unless-stopped
     environment:
@@ -96,8 +96,7 @@ services:
       context: ./gateway-service
       dockerfile: Dockerfile
     container_name: gateway
-    ports:
-      - "8080:8080"
+
     depends_on:
       - user-service
       - chat-service
